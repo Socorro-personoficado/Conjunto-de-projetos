@@ -1,0 +1,193 @@
+Método Paint()
+
+private void Form1_Paint(object sender, PaintEventArgs e)
+{
+// Instruções gráficas
+// Chamadas de funções
+}
+--------------------------------------
+Criando um ponto
+
+Para se desenhar um ponto usa-se a propriedade
+Graphics do objeto (PaintEventArgs).
+
+Exemplo:
+
+e.Graphics.DrawLine(<ObjPen>, x, y, x+1, y);
+-----------------------------------------
+Objeto da Classe Color
+
+Color cor = new Color();
+cor = Color.FromArgb(<Alfa>,<R>, <G>, <B>);
+-----------------------------------------
+
+Objeto da classe Pen
+
+Define parâmetros da caneta que reproduz os pontos no vídeo.
+
+Pen <Objeto> = new Pen(<cor>,<ExpN>);
+
+<ExpN> - Determina a espessura.
+-----------------------------------------
+
+Color cor = new Color();
+cor = Color.FromArgb(<ExpA>,<ExpN1,<ExpN2>,<ExpN3>);
+<ExpA> - Determina canal Alfa (Transparência do ponto).
+
+<ExpN1> - Determina a Intensidade no canal R.
+<ExpN2> - Determina a Intensidade no canal G.
+<ExpN3> - Determina a Intensidade no canal B.
+-----------------------------------------
+Exemplo da criação de um ponto no vídeo - algoritmo
+
+Pintap(Inteiro : x,y,cor)
+inicio
+
+cor = Caneta(cor);
+Desenhapixels(x,y,cor);
+-----------------------------------------
+
+##################################################################################################################################################
+LUIZ
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
+
+namespace WinFormsApp3
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        //Color cor = new Color();
+        //cor = Color.FromArgb(255,0,0);
+
+        //Pen caneta = new Pen(cor, 2);
+        //Color cor_P = new Color();
+        //cor_P = Color.FromArgb(0, 0, 0);
+
+        //Pen caneta_P = new Pen(cor_P, 2);
+        //float y1 = 0;
+        //float y2 = 0;
+        float ME_x;
+        float MA_x;
+        float C_y1;
+        float C_y2;
+        bool buttonClicked = false;
+        //PaintEventArgs e2;
+
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+            Color cor = new Color();
+            cor = Color.FromArgb(255, 0, 0);
+            Pen caneta = new Pen(cor, 2);
+
+            Pen caneta2 = new Pen(cor, 2);
+
+            Color cor_P = new Color();
+            cor_P = Color.FromArgb(0, 0, 0);
+            Pen caneta_P = new Pen(cor_P, 2);
+
+            // Definindo as coordenadas dos pontos inicial e final
+            float x1 = 0;
+            float y1 = 152;
+            float x2 = 400;
+            float y2 = 152;
+
+            // Desenhando a linha
+            e.Graphics.DrawLine(caneta, x1, y1, x2, y2);
+
+            x1 = 200;
+            y1 = 0;
+            x2 = 200;
+            y2 = 300;
+
+            // Desenhando a linha
+            e.Graphics.DrawLine(caneta, x1, y1, x2, y2);
+            for (int y = 0; y <= 300; y = y + 10)
+            {
+                for (int i = 0; i <= 100; i++)
+                {
+                    x1 = 2 + (4 * i);
+                    y1 = 0 + y;
+                    x2 = 2 + (4 * i);
+                    y2 = 1 + y;
+                    e.Graphics.DrawLine(caneta_P, x1, y1, x2, y2);
+                }
+            }
+            for (int i = 0; i <= 400; i = i + 10)
+            {
+                for (int y = 0; y <= 75; y++)
+                {
+                    x1 = 1 + i;
+                    y1 = 2 + (4 * y);
+                    x2 = 2 + i;
+                    y2 = 2 + (4 * y);
+                    e.Graphics.DrawLine(caneta_P, x1, y1, x2, y2);
+                }
+            }
+            if (buttonClicked) {
+
+                if (radioButton1.Checked)
+                {
+                    cor = Color.FromArgb(255, 0, 0);
+
+                    caneta2 = new Pen(cor, 2);
+                }
+                if (radioButton2.Checked)
+                {
+                    cor = Color.FromArgb(0, 255, 0);
+
+                    caneta2 = new Pen(cor, 2);
+                }
+                if (radioButton3.Checked)
+                {
+                    cor = Color.FromArgb(0, 0, 255);
+
+                    caneta2 = new Pen(cor, 2);
+                }
+                if (radioButton4.Checked)
+                {
+                    caneta2 = caneta_P;
+                }
+
+                
+                e.Graphics.DrawLine(caneta2, ME_x, C_y1, MA_x, C_y2);
+            }
+            this.Update();
+        }
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            ME_x = float.Parse(textBox1.Text);
+            MA_x = float.Parse(textBox2.Text);
+            float m = float.Parse(textBox3.Text);
+            float b = float.Parse(textBox4.Text);
+
+            C_y1 = ME_x * m + b;
+            C_y2 = MA_x * m + b;
+            label4.Text = ("Y = " + C_y1 + ";" + C_y2);
+
+            Color cor = new Color();
+            cor = Color.FromArgb(255, 0, 0);
+
+            Pen caneta = new Pen(cor, 2);
+
+            buttonClicked = true;
+
+            
+
+            this.Refresh();
+        }
+    }
+}
+
