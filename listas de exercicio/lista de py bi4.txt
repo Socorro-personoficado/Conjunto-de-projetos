@@ -1,0 +1,111 @@
+1-
+try:
+    arquivo = open('teste.html', 'w')
+
+    titulo = input("titulo: ")
+    arquivo.write(f'<title>{titulo}</title>\n')
+    conteudo = input("texto junto com sua formatacao: ")
+    arquivo.write(conteudo)
+
+    arquivo.close()
+
+
+except Exception as erro:
+    print(f"ERRO: {erro}")
+
+2-try:
+    codigo_X = input("X(codigo): ")
+    codigo_D_X = input("D_X(codigo): ")
+    codigo_P_X = input("P_X(codigo): ")
+    curso = input("curso: ")
+    carga = input("carga: ")
+    anoletivo = input("anoletivo: ")
+    arquivo = open('X.txt', 'a')
+    arquivo.write(f'{codigo_X} |\n')
+    arquivo.write(f'{codigo_D_X} |\n')
+    arquivo.write(f'{codigo_P_X} |\n')
+    arquivo.write(f'{curso} |\n')
+    arquivo.write(f'{carga} |\n')
+    arquivo.write(f'{anoletivo}\n')
+    arquivo.close()
+
+    codigo_P = input("professor(codigo): ")
+    nome_P = input("professor(nome): ")
+    arquivo = open('professor.txt', 'a')
+    arquivo.write(f'{codigo_P} |\n')
+    arquivo.write(f' {nome_P}\n')
+    arquivo.close()
+
+    codigo_D = input("diciplina(codigo): ")
+    nome_D = input("diciplina(nome): ")
+    arquivo = open('diciplinas.txt', 'a')
+    arquivo.write(f'{codigo_D} |\n')
+    arquivo.write(f' {nome_D}\n')
+    arquivo.close()
+
+    arquivo1 = open('professor.txt', 'r')
+    arquivo2 = open('diciplinas.txt', 'r')
+    arquivo3 = open('X.txt', 'r')
+    texto = arquivo3.readlines()
+    criacao = open(f'{codigo_P}.html', 'w')
+    criacao.write(f'''Disciplinas do professor: {nome_P}
+    Curso: {curso}
+    CÓDIGO DA DISCIPLINA | NOME DISCIPLINA
+    {codigo_D} | {nome_D}
+    {codigo_P} |{nome_P} ''')
+    for x in texto:
+        if x == codigo_P:
+            criacao.write(f'''Curso:2   
+    30 |paw''')
+    arquivo1.close()
+    arquivo2.close()
+    arquivo3.read()
+    arquivo3.close()
+
+except Exception as erro:
+    print(f"ERRO: {erro}")
+
+3-import reportlab.pdfgen import canvas
+
+def gerarpdf(dicionario):
+    try:
+        nomearquivo = input('informe o nome do PDF: ')
+        pdf = canvas.Canvas(f'{nomearquivo}.pdf')
+        pdf.setFillColor('black')
+        pdf.setTitle('relatorio')
+        pdf.setFont("Helvetica-Oblique",16)
+        pdf.drawString(10,720,'Nome professor | Diciplina')
+        x = 700
+        pdf.save()
+
+    except Exception as erro:
+        print(f"ERRO: {erro}")
+
+
+curso = {'curso': [1 , 12 , 'POOI']}
+prof = {'alberson': [10 , 1]}
+
+
+n1 = input('''1-• Dados completos de um professor diante de um número de registro informado pelo usuário
+2-• Dados completos de professores cujo nomes iniciem com caracteres informados pelo usuário
+3-• Nomes de todas as disciplinas de um curso informado pelo usuário
+4-• Nomes de professores que dão aulas em um curso informado pelo usuário
+5-• Carga horária TOTAL de um curso, cujo código tenha sido informado pelo usuário PARA UM DETERMINADO ANO LETIVO. 
+''')
+if n1 == 1:
+    n2 = input("codigo: ")
+    if n2 == codigo:
+        print(prof)
+if n1 == 2:
+    n2 = input("letra: ")
+    if n2 == letra:
+        print(prof)
+if n1 == 3:
+    n2 = input("codigo: ")
+    print(curso[codigo][2])
+if n1 == 4:
+    n2 = input("curso: ")
+    print(prof[curso][1])
+if n1 == 5:
+    n2 = input("codigo: ")
+    soma =+ curso[n2][1]

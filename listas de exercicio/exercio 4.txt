@@ -1,0 +1,557 @@
+1-/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 25/04/2024
+* Autores do Projeto: Luiz Miguel de Barros Santos
+*                     
+* Turma: 2H
+* Atividade Proposta em aula
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("escreva a ");
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine("escreva b ");
+            int b = int.Parse(Console.ReadLine());
+            Console.WriteLine("escreva c ");
+            int c = int.Parse(Console.ReadLine());
+            if (a + b < c)
+            {
+                Console.WriteLine(a);
+                Console.WriteLine(b);
+                Console.WriteLine(c);
+            }
+            
+
+        }
+    }
+}
+
+2-/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 25/04/2024
+* Autores do Projeto: Luiz Miguel de Barros Santos
+*                     
+* Turma: 2H
+* Atividade Proposta em aula
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("escreva seu nome");
+            string a = Console.ReadLine();
+            Console.WriteLine("escreva sexo");
+            string sex = Console.ReadLine();
+            Console.WriteLine("escreva seu estado civil");
+            string est = Console.ReadLine();
+            if (sex == "F" && est == "CASADA")
+            {
+                Console.WriteLine("tempo casada");
+                int tempo = int.Parse(Console.ReadLine());
+
+            }
+            
+
+        }
+    }
+}
+
+3-/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 25/04/2024
+* Autores do Projeto: Luiz Miguel de Barros Santos
+*                     
+* Turma: 2H
+* Atividade Proposta em aula
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("escreva o numero");
+            int n1 = int.Parse(Console.ReadLine());
+
+            if (n1 % 2 == 0)
+            {
+                Console.WriteLine("nuemro par");
+
+            }
+            else
+            {
+                Console.WriteLine("nuemro impar");
+            }
+
+
+        }
+    }
+}
+
+4-/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 25/04/2024
+* Autores do Projeto: Luiz Miguel de Barros Santos
+*                     
+* Turma: 2H
+* Atividade Proposta em aula
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("escreva o numero a");
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine("escreva o numero b");
+            int b = int.Parse(Console.ReadLine());
+
+            if (a == b)
+            {
+                int c = a + b;
+                Console.WriteLine(c);
+
+            }
+            else
+            {
+                int c = a * b;
+                Console.WriteLine(c);
+            }
+
+
+        }
+    }
+}
+
+5-/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 25/04/2024
+* Autores do Projeto: Luiz Miguel de Barros Santos
+*                     
+* Turma: 2H
+* Atividade Proposta em aula
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("escreva o numero");
+            int n1 = int.Parse(Console.ReadLine()); 
+
+            if (n1 >= 0)
+            {
+                int x = n1 * 2;
+                Console.WriteLine(x);
+
+            }
+            else
+            {
+                int x = n1 * 3;
+                Console.WriteLine(x);
+            }
+
+
+        }
+    }
+}
+
+6-/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 25/04/2024
+* Autores do Projeto: Luiz Miguel de Barros Santos
+*                     
+* Turma: 2H
+* Atividade Proposta em aula
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bool a = true;
+            bool b = true;
+
+            if (a == true && b == true)
+            {
+                Console.WriteLine("sao verdadeiros");
+
+            }
+            else
+            {
+                Console.WriteLine("nao sao verdadeiros");
+            }
+
+
+        }
+    }
+}
+
+7-/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 25/04/2024
+* Autores do Projeto: Luiz Miguel de Barros Santos
+*                     
+* Turma: 2H
+* Atividade Proposta em aula
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("escreva o numero");
+            int n1 = int.Parse(Console.ReadLine());
+
+            if (n1 % 2 == 0)
+            {
+                int soma = n1 + 5;
+                Console.WriteLine(soma);
+
+            }
+            else
+            {
+                int soma = n1 + 8;
+                Console.WriteLine(soma);
+            }
+
+
+        }
+    }
+}
+
+8-/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 25/04/2024
+* Autores do Projeto: Luiz Miguel de Barros Santos
+*                     
+* Turma: 2H
+* Atividade Proposta em aula
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int np1 = 0;
+
+            Console.WriteLine("escreva o numero 1");
+            int n1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("escreva o numero 2");
+            int n2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("escreva o numero 3");
+            int n3 = int.Parse(Console.ReadLine());
+
+            if (n1 > n2)
+            {
+                 np1 = n1;
+            }
+            if(n2 > n3)
+            {
+                 np1 = n2;
+            }
+            else
+            {
+                np1 = n3;
+            }
+            Console.WriteLine(np1);
+
+        }
+    }
+}
+
+9-/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 25/04/2024
+* Autores do Projeto: Luiz Miguel de Barros Santos
+*                     
+* Turma: 2H
+* Atividade Proposta em aula
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("escreva seu altura");
+            float alt = float.Parse(Console.ReadLine());
+            Console.WriteLine("escreva sexo");
+            string sex = Console.ReadLine();
+
+            if (sex == "F")
+            {
+                float peso = (float)((62.1 * alt) - 44.7);
+                Console.WriteLine(peso);
+
+            }
+            else
+            {
+                float peso = (float)((72.7 * alt) - 58);
+                Console.WriteLine(peso);
+            }
+
+
+        }
+    }
+}
+
+10-/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 25/04/2024
+* Autores do Projeto: Luiz Miguel de Barros Santos
+*                     
+* Turma: 2H
+* Atividade Proposta em aula
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("escreva seu altura");
+            float alt = float.Parse(Console.ReadLine());
+            Console.WriteLine("escreva o seu peso");
+            float peso = float.Parse(Console.ReadLine());
+
+            float IMC = peso / (alt)^2;
+            Console.WriteLine(IMC);
+
+        }
+    }
+}
+
+11-/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 25/04/2024
+* Autores do Projeto: Luiz Miguel de Barros Santos
+*                     
+* Turma: 2H
+* Atividade Proposta em aula
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("escreva seu preco");
+            float preco = float.Parse(Console.ReadLine());
+            Console.WriteLine("escreva metado");
+            string metado = Console.ReadLine();
+
+            if (metado == 1)
+            {
+                float preco = (float)((100 * preco) * 10);
+                Console.WriteLine(preco);
+
+            }
+            if (metado == 2)
+            {
+                float preco = (float)((100 * preco) * 15);
+                Console.WriteLine(preco);
+
+            }
+            if (metado == 3)
+            {
+
+
+            }
+            if (metado == 4)
+            {
+                float preco = (float)((100 * preco) - 10);
+                Console.WriteLine(preco );
+
+            }
+
+        }
+    }
+}
+
+12-/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 25/04/2024
+* Autores do Projeto: Luiz Miguel de Barros Santos
+*                     
+* Turma: 2H
+* Atividade Proposta em aula
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string np1 = "";
+
+            Console.WriteLine("escreva a nota 1");
+            float n1 = float.Parse(Console.ReadLine());
+            Console.WriteLine("escreva a nota 2");
+            float n2 = float.Parse(Console.ReadLine());
+            Console.WriteLine("escreva a nota 3");
+            float n3 = float.Parse(Console.ReadLine());
+            Console.WriteLine("escreva ME");
+            float ME = float.Parse(Console.ReadLine());
+
+            float MA = (n1 + n2 * 2 + n3 * 3 + ME) / 7;
+
+            if (MA >= 90)
+            {
+                np1 = "A";
+            }
+            if (MA >= 75 && MA < 90)
+            {
+                np1 = "B";
+            }
+            if (MA >= 60 && MA < 75)
+            {
+                np1 = "C";
+            }
+            if (MA >= 40 && MA < 60)
+            {
+                np1 = "D";
+            }
+            if (MA >= 40)
+            {
+                np1 = "E";
+            }
+
+            if (np1 == "D" || np1 == "E")
+            {
+                Console.WriteLine("reprovado");
+            }
+            else
+            {
+                Console.WriteLine("aprovado");
+            }
+        }
+    }
+}

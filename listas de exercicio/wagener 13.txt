@@ -1,0 +1,114 @@
+1-using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WinFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string texto = textBox1.Text;
+            string deli = textBox2.Text;
+            string deli2 = textBox3.Text;
+
+            int n1 = texto.IndexOf(deli);
+            int n2 = texto.IndexOf(deli2);
+            int compri = n2 - n1;
+            string texto_deli = texto.Substring(n1+1, compri-1);
+            textBox4.Text = texto_deli;
+
+        }
+    }
+}
+
+
+2-using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WinFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //maria,cusus
+            string nome = textBox1.Text;
+            int n1 = nome.IndexOf(",");
+
+            int compri = nome.Length - n1 -1;
+            string texto_deli = nome.Substring(n1+1, compri);
+            string texto_deli2 = nome.Substring(0, n1);
+            textBox2.Text = texto_deli + "," + texto_deli2; 
+
+        }
+    }
+}
+
+3-using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WinFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string numeros = "zero,um,dois,três,quatro,cinco,seis,sete,oito,nove,dez,onze,doze,treze,quatorze,quinze,dezesseis,dezessete,dezoito,dezenove,vinte,Vinte e um,vinte e dois,vinte e três,vinte e quatro,Vinte e cinco,vinte e seis,vinte e sete,vinte e oito,vinte e nove," +
+                "trinta,trinta e um,trinta e dois,trinta e três,trinta e quatro,trinta e cinco,trinta e seis,trinta e sete,trinta e oito,trinta e nove,quarenta,quarenta e um,quarenta e dois,quarenta e três,quarenta e quatro,quarenta e cinco,quarenta e seis,quarenta e sete,quarenta e oito,quarenta e nove," +
+                "cinquenta,Cinquenta e um,Cinquenta e dois,Cinquenta e três,Cinquenta e quatro,Cinquenta e cinco,Cinquenta e seis,Cinquenta e sete,Cinquenta e oito,Cinquenta e nove,Sessenta e um,Sessenta e dois,Sessenta e três,Sessenta e quatro,Sessenta e cinco,Sessenta e seis,Sessenta e sete,Sessenta e oito," +
+                "Sessenta e nove,Setenta e um,Setenta e dois,Setenta e três,Setenta e quatro,Setenta e cinco,Setenta e seis,Setenta e sete,Setenta e oito,Setenta e nove,Oitenta e um,Oitenta e dois,Oitenta e três,Oitenta e quatro,Oitenta e cinco,Oitenta e seis,Oitenta e sete,Oitenta e oito,Oitenta e nove,Noventa e um,Noventa e dois,Noventa e três,Noventa e quatro,Noventa e cinco,Noventa e seis,Noventa e sete,Noventa e oito,Noventa e nove,cem";
+            string numeros2 = numeros;
+            int compri = numeros2.Length;
+            int n1 = 0;
+            int compri2 = 0;
+            int numero_txt = int.Parse(textBox1.Text);
+            for (int x = 0; x < numero_txt; x++) {
+                compri = numeros2.Length;
+                n1 = 1 + numeros2.IndexOf(",");
+                compri2 = compri - n1;
+                numeros2 = numeros2.Substring(n1, compri2);
+            }
+            int n2 = 1 + numeros2.IndexOf(",");
+            numeros2 = numeros2.Substring(0, n2 - 1);
+
+
+            textBox1.Text = numeros2;
+        }
+    }
+}

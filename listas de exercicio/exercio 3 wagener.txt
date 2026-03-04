@@ -1,0 +1,476 @@
+1-/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 09/04/2024
+* Autores do Projeto: Luiz Miguel de Barros Santos
+*                     
+* Turma: 2H
+* Atividade Proposta em aula
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n1;
+            for(n1 = 1; n1 <= 500; n1 = n1 + 1)
+            {
+                if(n1 % 2 == 1)
+                {
+                    if (n1 % 3 == 0)
+                    {
+                        Console.WriteLine(n1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+2-/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 09/04/2024
+* Autores do Projeto: Luiz Miguel de Barros Santos
+*                     
+* Turma: 2H
+* Atividade Proposta em aula
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n1 , n2 , maior , menor;
+            maior = 0;
+            menor = 0;
+            for (n1 = 1; n1 <= 15; n1 = n1 + 1)
+            {
+                Console.WriteLine("escreva a altura");
+                n2 = int.Parse(Console.ReadLine());
+                
+                if (n2 > maior)
+                {
+                    maior = n2;
+                }
+                if (n2 < menor)
+                {
+                    menor = n2;
+                }
+            }
+            Console.WriteLine(maior);
+            Console.WriteLine(menor);
+        }
+    }
+}
+
+3-/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 09/04/2024
+* Autores do Projeto: Luiz Miguel de Barros Santos
+*                     
+* Turma: 2H
+* Atividade Proposta em aula
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int con , cont;
+            float n1, n2 , soma , media;
+            double po_pe, po , ne_pe , ne;
+            soma = 0;
+            cont = 0;
+            con = 1;
+            po = 0;
+            ne = 0;
+            media = 0;
+
+            while (con == 1)
+            {
+                Console.WriteLine("escreva o numero");
+                n1 = float.Parse(Console.ReadLine());
+
+                soma = soma + n1;
+                cont++;
+
+                if (n1 < 0)
+                {
+                    ne++;
+                }else
+                {
+            
+                    po++;
+                }
+
+                Console.WriteLine("quer continuar? 1(sim)/0(nao)");
+                con = int.Parse(Console.ReadLine());
+            }
+
+            media = soma / cont;
+            po_pe = (po * 100) / cont;
+            ne_pe = (ne * 100) / cont;
+
+            Console.WriteLine(media);
+            Console.WriteLine(po_pe);
+            Console.WriteLine(ne_pe);
+        }
+    }
+}
+
+4-/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 09/04/2024
+* Autores do Projeto: Luiz Miguel de Barros Santos
+*                     
+* Turma: 2H
+* Atividade Proposta em aula
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int p1 , p2 , p3 , p4 , cont , n1 , con ;
+
+            cont = 0;
+            con = 1;
+            p1 = 0;
+            p2 = 0;
+            p3 = 0;
+            p4 = 0;
+
+            while (con == 1)
+            {
+                Console.WriteLine("escreva o numero");
+                n1 = int.Parse(Console.ReadLine());
+
+                cont++;
+
+                if (n1 < 0)
+                {
+                    break;
+                }
+                if ((n1 >= 0) && (n1 <= 25))
+                {
+                    p1++;
+                }
+                if ((n1 >= 26) && (n1 <= 50))
+                {
+                    p2++;
+                }
+                if ((n1 >= 51) && (n1 <= 75))
+                {
+                    p3++;
+                }
+                if ((n1 >= 76) && (n1 <= 100))
+                {
+                    p4++;
+                }
+
+            }
+
+            Console.WriteLine(p1);
+            Console.WriteLine(p2);
+            Console.WriteLine(p3);
+            Console.WriteLine(p4);
+        }
+    }
+}
+
+5-/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 09/04/2024
+* Autores do Projeto: Luiz Miguel de Barros Santos
+*                     
+* Turma: 2H
+* Atividade Proposta em aula
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            float pa, im , soma , cont , n1 , con , media , media_pa , soma_pa;
+
+            cont = 0;
+            con = 1;
+            pa = 0;
+            im = 0;
+            soma = 0;
+            media_pa = 0;
+            media = 0;
+            soma_pa = 0;
+
+            while (con == 1)
+            {
+                Console.WriteLine("escreva o numero");
+                n1 = int.Parse(Console.ReadLine());
+                soma = soma + n1;
+
+                if (n1 == 0)
+                {
+                    break;
+                }
+                if (n1 % 2 == 0)
+                {
+                    pa++;
+                    soma_pa = soma_pa = n1;
+                }
+                else
+                {
+                    im++;
+                }
+                cont++;
+            }
+            media = soma / cont;
+            media_pa = soma_pa / cont;
+
+            Console.WriteLine(media);
+            Console.WriteLine(media_pa);
+            Console.WriteLine(pa);
+            Console.WriteLine(im);
+        }
+    }
+}
+
+
+6-/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 09/04/2024
+* Autores do Projeto: Luiz Miguel de Barros Santos
+*                     
+* Turma: 2H
+* Atividade Proposta em aula
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n1 ;
+            for (n1 = 100; n1 <= 200; n1 = n1 + 1)
+            {
+                if (n1 % 2 == 1)
+                {
+                    Console.WriteLine(n1);
+                }
+            }
+        }
+    }
+}
+
+7-/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 09/04/2024
+* Autores do Projeto: LUIZ MIGUEL DE BARROS SANTOS
+* Turma: 2H
+* Atividade Proposta em aula
+* 
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			int n;
+			float a0, r, res , num;
+			num = 0;
+			res = 0;
+
+			Console.WriteLine("escreva o termo inicial");
+			a0 = float.Parse(Console.ReadLine());
+			Console.WriteLine("escreva a razao");
+			r = float.Parse(Console.ReadLine());
+
+			while (num < 10)
+			{
+				num = num + 1;
+				res = res + a0 + r;
+				Console.WriteLine(res);
+			}
+		}
+	}
+}
+
+8-/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 09/04/2024
+* Autores do Projeto: Luiz Miguel de Barros Santos
+*                     
+* Turma: 2H
+* Atividade Proposta em aula
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n;
+            float a0, r, res, num;
+            num = 0;
+            res = 0;
+
+            Console.WriteLine("escreva o termo inicial");
+            a0 = float.Parse(Console.ReadLine());
+            Console.WriteLine("escreva a razao");
+            r = float.Parse(Console.ReadLine());
+
+            while (num < 10)
+            {
+                num = num + 1;
+                res = res + a0 * r;
+                Console.WriteLine(res);
+            }
+        }
+    }
+}
+
+9-/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 09/04/2024
+* Autores do Projeto: Luiz Miguel de Barros Santos
+*                     
+* Turma: 2H
+* Atividade Proposta em aula
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n1 , res , num;
+            num = 0;
+            res = 5;
+
+            Console.WriteLine("escreva o numero");
+            n1 = int.Parse(Console.ReadLine());
+
+            while (num <= n1-2)
+            {
+                num = num + 1;
+                res = (res * num);
+                Console.WriteLine(res);
+            }
+        }
+    }
+}
+
+10-/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 09/04/2024
+* Autores do Projeto: Luiz Miguel de Barros Santos
+*                     
+* Turma: 2H
+* Atividade Proposta em aula
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n , res , num;
+            
+            num = 0;
+            res = 1;
+
+            Console.WriteLine("escreva o numero");
+            n = int.Parse(Console.ReadLine());
+
+
+            while (num <= 30)
+            {
+                num = num + 1;
+                n = n - 1 + n;
+                Console.WriteLine(n);
+            }
+        }
+    }
+}

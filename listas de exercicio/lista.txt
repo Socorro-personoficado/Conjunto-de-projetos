@@ -1,0 +1,24 @@
+5) def mm(listx):
+
+    big = max(listx)
+    big_p = listx.index(big)
+    sml = min(listx)
+    sml_p = listx.index(sml)
+    print(f"Maior número: {big}")
+    print(f"Posição: {big_p}\n")
+    print(f"Menor número: {sml}")
+    print(f"Posição: {sml_p}")
+    print(listx)
+
+listf = []
+while True:
+    x = int(input("Digite um número (selecione 0 para terminar): "))
+    if x == 0:
+        break
+    if x in listf:
+        print("Número já exsite")
+        continue
+    listf.append(x)
+
+
+mm(listf)

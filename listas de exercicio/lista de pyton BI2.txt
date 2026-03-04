@@ -1,0 +1,363 @@
+27)
+1-frase = input("escreva a frase")
+print(f'frase capitalizada ={frase.upper()}') 
+print(f'frase capitalizada ={frase.lower()}')
+print(f'quantidade de caracteres ={len(frase)}')
+frase2 = frase.split()
+print(f'quantidade de caracteres na primeira palavra={len(frase2[0])}')
+
+2-numero = input("escreva um numero de 0 9999")
+casas = "unidade dezena centena milhares"
+casas2 = casas.split()
+for x in range(0,len(numero)):
+    print(f' {casas2[(len(numero)-1) - x][:]} = {numero[x]}')
+
+3-nome = input("escreva o nome da cidade")
+if "São" in nome[0:3]:
+    print('inicia com São')
+else:
+    print('nao inicia com São')
+
+4-nome = input("escreva o nome")
+if "Silva" in nome:
+    print('true')
+else:
+    print('false')
+
+5-nome = input("escreva o nome: ")
+print(f'A ou a aparece:{nome.count("a") + nome.count("A")}')
+print(f'A aparece primeiro em :{nome.find("A")}')
+print(f'A aparece por ultimo em :{nome.rfind("A")}')
+
+6-nome = input("escreva o nome: ")
+nome2 = nome.split()
+print(f' primeiro nome = {nome2[0]}')
+print(f' primeiro nome = {nome2[len(nome2) - 1]}')
+
+28.1.1)
+1-extenso = ('um','dois' ,'tres' ,'quatro' ,'cinco' ,'seis','sete','oito','nove','dez')
+n = int(input("escreva o numero: "))
+print(f' numero por extenso = {extenso[n-1]}')
+
+
+2-time = ('arthur','bailu' ,'calvo' ,'dibia' ,'eucosoto' ,'faustao','gugu','himar','luiz','jalberson')
+for x in range(0,5):
+    print(f'{x+1} = {time[x]}')
+for x in range(6,10):
+    print(f'{x+1} = {time[x]}')
+print(f'{sorted(time)}')
+timeu = input("escreva o nome do time: ")
+print(f'posicao de {timeu} = {time.index(timeu,0) + 1}')
+
+3-import random
+numeros = (random.randint(1,100) ,random.randint(1,100) ,random.randint(1,100)  ,random.randint(1,100) ,random.randint(1,100))
+numeros2 = sorted(numeros)
+print(f'numero menor = {numeros2[0]}')
+print(f'numero maior = {numeros2[4]}')
+print(f'numeros = {numeros}')
+
+4-n1 = int(input("escreva o numero 1: "))
+n2 = int(input("escreva o numero 2: "))
+n3 = int(input("escreva o numero 3: "))
+n4 = int(input("escreva o numero 4: "))
+n5 = int(input("escreva o numero 5: "))
+numeros = (n1 , n2 , n3 ,n4 ,n5)
+print(f'dez aperece = {numeros.count(10)}')
+y = 0;
+for x in range(0,len(numeros)):
+    if (numeros.count(3) > 0 and y == 0):
+        y = 1;
+        print(f'tres aperece na posicao = {numeros.index(3,x) + 1}')
+    else:
+        print(f'tres aperece na posicao = nao tem 3')
+
+for x in range(0,len(numeros)):
+    if (numeros[x] % 2 == 0):
+        print(f'numero e par = {numeros[x] }')
+
+5-tabela = ('''            lapis = ......10 R$
+             caneta = .....20 R$   
+             lista feita = 50 R$           
+          ''')
+print(f'[{tabela}')
+
+6-palavras = ('casa', 'carro', 'banana', 'computador', 'amor')
+
+for palavra in palavras:
+   
+    vogais = ("")
+
+
+    for caracter in palavra:
+
+        if caracter in 'aeiouAEIOU':
+
+            vogais += caracter
+
+
+    print(f"Vogais de '{palavra}': {vogais}")
+
+
+28.2.1-
+1-numeros = []
+for i in range(5):
+    numero = int(input(f"Digite o {i + 1}º número: "))
+    numeros.append(numero)
+
+
+maior = max(numeros)
+menor = min(numeros)
+
+
+indices_maior = [i for i, numero in enumerate(numeros) if numero == maior]
+indices_menor = [i for i, numero in enumerate(numeros) if numero == menor]
+
+
+print(f"Maior número: {maior}")
+print(f"Índices do maior número: {indices_maior}")
+print(f"Menor número: {menor}")
+print(f"Índices do menor número: {indices_menor}")
+
+2-numeros = []
+
+while True:
+    numero = int(input("Digite um número diferente (0 para finalizar): "))
+
+    if numero in numeros:
+        print("Número já existe na lista. Digite outro número.")
+        
+    else:
+        numeros.append(numero)
+
+    if numero == 0:
+        break
+
+print(f"Lista de números diferentes: {numeros}")
+
+3-numeros = []
+
+for i in range(10):
+    while True:
+        numero = int(input(f"Digite o {i + 1}º número: "))
+
+        if numero in numeros:
+            print("Número já existe na lista. Digite outro número.")
+        else:
+            break
+
+    for posisao, num in enumerate(numeros):
+        if numero < num:
+            numeros.insert(posisao, numero)
+            print(f"Número inserido na posição {posisao}")
+            break
+    else:
+        numeros.append(numero)
+        print(f"Número inserido na posição {len(numeros) - 1}")
+
+
+print(f"Lista de números em ordem crescente: {numeros}")
+
+4-numeros = []
+pares = []
+impares = []
+
+for i in range(8):
+    while True:
+        numero = int(input(f"Digite o {i + 1}º número: "))
+
+        if numero in numeros:
+            print("Número já existe na lista. Digite outro número.")
+        else:
+            if (numero % 3 == 0):
+                impares.append(numero)
+            break
+
+    for posisao, num in enumerate(pares):
+        if (numero < num and numero % 2 == 0):
+            print(f"numero = {numero}")
+            print(f"num = {num}")
+            print(f"posisao = {posisao}")
+            pares.insert(posisao, numero)
+            print(f"Número inserido na posição {posisao}")
+            break
+        elif(numero % 2 == 0):
+            pares.append(numero)
+            print(f"Número inserido na posição {len(pares) - 1}")
+
+
+print(f"Lista de números pares em ordem crescente: {pares}")
+print(f"Lista de números impares: {impares}")
+
+28.3.1-
+1-id = [['luiz',2500] , ['umadanoite',3500] ,['carlas',1500]]
+salarios2 = []
+salarios = 0
+
+for nome , salario in id:
+    salarios = salarios + salario
+    salarios2.append(salario)
+
+menor = sorted(salarios2)
+print(f"salarios acumulados = {salarios}")
+
+for indice , dados in enumerate(id):
+    indice_id = indice
+
+print(f"quantidade de pessoas(ids) = {indice+1}")
+print(f"menor salario = {menor[0]}")
+
+2-numeros = list()
+pares = list()
+impares = list()
+
+for i in range(10):
+    numero = int(input(f"Digite o {i + 1}º número: "))
+
+    if (numero % 2 == 0):
+        pares.append(numero)
+    else:
+        impares.append(numero)
+
+print(f"Lista de números pares em ordem crescente: {sorted(pares)}")
+print(f"Lista de números impares em ordem crescente: {sorted(impares)}")
+
+3-matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+for linha in matriz:
+    for coluna in linha:
+        print(f"{coluna}", end=" ")
+    print()
+
+4-matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+soma = 0
+
+for linha in matriz:
+    for coluna in linha:
+        print(f"{coluna}", end=" ")
+    print()
+for i in range(len(matriz)):
+    soma += matriz[i][i]
+    print(f"{matriz[i][i]}")
+print(f"{soma}")
+
+5-import random
+
+n = int(input("Quantos jogos da Mega Sena você quer simular? "))
+
+palpites = []
+
+for i in range(n):
+    palpite = []
+    while len(palpite) < 6:
+        num = random.randint(1, 60)
+        if num not in palpite:
+            palpite.append(num)
+    palpites.append(palpite)
+
+for i, palpite in enumerate(palpites):
+    print(f"Jogo {i+1}: {palpite}")
+
+6-alunos = []
+
+while True:
+    nome = input("Nome do aluno: ")
+    matricula = input("Matrícula do aluno: ")
+    nota1 = float(input("Nota 1: "))
+    nota2 = float(input("Nota 2: "))
+
+    alunos.append((nome, matricula, nota1, nota2))
+
+    continuar = input("continuar adicionando alunos? (s/n) ")
+    if (continuar == "n"):
+        break
+
+matricula_consulta = input("Informe a matrícula do aluno que deseja consultar: ")
+
+aluno_encontrado = ""
+for aluno in alunos:    
+    if (aluno[1] == matricula_consulta):
+        aluno_encontrado = aluno
+        break
+
+if (aluno_encontrado == aluno):
+    media_final = (aluno_encontrado[2] + aluno_encontrado[3]) / 2
+    print(f"Nome: {aluno_encontrado[0]}")
+    print(f"Média final: {media_final:.2f}")
+else:
+    print("Aluno não encontrado.")
+
+28.4.1-
+1-aluno = {}
+
+aluno['nome'] = input("digite o nome do aluno: ")
+aluno['media'] = int(input("digite a media do aluno: "))
+if(aluno['media'] <= 5.9):
+    aluno['rec'] = "aluno em recuperação"
+else:
+    aluno['rec'] = "Aluno na média"
+print(f'{aluno}')
+
+2-import  random
+
+jogador1 = {'nome':'carlos' ,"dado": random.randint(1, 6) }
+jogador2 = {'nome':'rodrigo' ,"dado": random.randint(1, 6) }
+jogador3 = {'nome':'neymar' ,"dado": random.randint(1, 6) }
+jogador4 = {'nome':'jao casiano' ,"dado": random.randint(1, 6) }
+partida = [jogador1,jogador2,jogador3,jogador4]
+
+dado_valor = []
+
+for indice ,  valor in enumerate(partida):
+    print(f'jogador{partida[indice]}')
+    for k , v in valor.items():
+        print(f'{k} = {v}')
+        if(k == "dado"):
+            dado_valor.append(v)
+
+dado_valor2 = sorted(dado_valor , reverse=True)
+for x in range(0 , len(dado_valor2)):
+    print(f'{x+1} lugar: {partida[x]['nome']} com {dado_valor2[x]}')
+
+
+3-trabalhador = {}
+
+trabalhador["nome"] = input("Nome do trabalhador: ")
+trabalhador["ano_nascimento"] = int(input("Ano de nascimento: "))
+trabalhador["ano_carreira"] = int(input("Ano de início da carreira profissional: "))
+
+idade = 2024 - trabalhador["ano_nascimento"]
+
+anos_trabalho = 2024 - trabalhador["ano_carreira"]
+
+anos_aposentadoria = 30 - anos_trabalho
+
+idade_aposentadoria = idade + anos_aposentadoria
+
+print(f"Nome: {trabalhador['nome']}")
+print(f"Idade: {idade}")
+print(f"Anos de trabalho: {anos_trabalho}")
+print(f"Anos que faltam para se aposentar: {anos_aposentadoria}")
+print(f"Idade quando se aposentar: {idade_aposentadoria}")
+
+4-time = {}
+
+time["nome"] = input("Nome do time: ")
+time["partidas"] = int(input("Quantas partidas disputou: "))
+
+gols_partida = []
+total_gols = 0
+
+for x in range(0, time["partidas"]):
+    gols = int(input(f"Gols na partida {x+1}: "))
+    gols_partida.append(gols)
+    total_gols += gols
+
+
+time["gols_partida"] = gols_partida
+time["total_gols"] = total_gols
+
+print(f" o nome do time é {time['nome']} e disputou {time['partidas']} partidas, fez os seguintes gols:")
+for x, gols in enumerate(time["gols_partida"]):
+    print(f"Partida {x+1} : {gols} gols")
+print(f"Total de gols ===> {time['total_gols']}")

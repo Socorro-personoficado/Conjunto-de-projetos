@@ -1,0 +1,946 @@
+12.4
+a)
+Algoritmo "semnome"
+Var
+valor , taxa , temp: inteiro
+
+procedimento prestacao(x : inteiro ; y : inteiro ;  z : inteiro)
+var
+prest : real
+
+inicio
+prest <- x + (x * (y / 100) * z)
+escreval ("prestacao por valor = ",prest)
+
+fimprocedimento
+
+procedimento prestacaoR( var x : real ; y : inteiro ;  z : inteiro)
+var
+
+inicio
+x <- x + (x * (y / 100) * z)
+
+
+fimprocedimento
+
+Inicio
+escreval("escreva o valor")
+leia (valor)
+escreval("escreva a taxa")
+leia (taxa)
+escreval("escreva o tempo")
+leia (temp)
+prestacao (valor , taxa , temp)
+prestacaoR (valor , taxa , temp)
+
+escreval ("prestacao por referencia = ",valor)
+
+
+Fimalgoritmo
+
+b)
+Algoritmo "semnome"
+Var
+n , soma: inteiro
+
+procedimento ribo( n : inteiro)
+var
+soma : inteiro
+
+inicio
+enquanto ( n > 0 ) faca
+      soma <- soma + n
+      n <- n - 1
+fimenquanto
+escreval ("soma dos numeros ate o valor = ", soma)
+
+fimprocedimento
+
+procedimento riboR( var soma : inteiro ; n : inteiro)
+var
+
+inicio
+enquanto ( n > 0 ) faca
+      soma <- soma + n
+      n <- n - 1
+fimenquanto
+fimprocedimento
+
+Inicio
+escreval("escreva o valor")
+leia (n)
+ribo (n)
+riboR (soma , n)
+escreval ("soma dos numeros ate o valor por referencia = ", soma)
+
+
+Fimalgoritmo
+
+c)Algoritmo "semnome"
+Var
+n , atu , ant , prox  : inteiro
+
+procedimento fibo( n : inteiro)
+var
+ant , atu , prox : inteiro
+
+inicio
+ant <- 0
+atu <- 1
+prox <- 1
+enquanto ( atu < n ) faca
+      escreval ("fiibonate ate o valor = ", atu)
+      ant <- atu
+      atu <- prox
+      prox <- ant + atu
+fimenquanto
+
+fimprocedimento
+
+procedimento fiboR( var ant : inteiro ; var atu : inteiro ; var prox : inteiro)
+var
+
+inicio
+      ant <- atu
+      atu <- prox
+      prox <- ant + atu
+fimprocedimento
+
+Inicio
+escreval("escreva o valor")
+leia (n)
+fibo (n)
+ant <- 0
+atu <- 1
+prox <- 1
+enquanto ( atu < n ) faca
+     escreval ("fiibonate ate o valor por referencia = ", atu)
+     fiboR (ant , atu , prox)
+fimenquanto
+
+Fimalgoritmo
+
+d)Algoritmo "semnome"
+Var
+base , expo: inteiro
+
+procedimento potencia( base : inteiro ; expo : inteiro)
+var
+cont , re : inteiro
+
+inicio
+re <- 1
+enquanto ( cont < expo )faca
+         re <- re * base
+         cont <- cont + 1
+fimenquanto
+se (expo = 0 ) entao
+   re <- 1
+fimse
+escreval (" o resultado e = " , re)
+
+fimprocedimento
+
+procedimento potenciaR( var base : inteiro ; expo : inteiro)
+var
+
+re , cont:inteiro
+
+inicio
+
+re <- 1
+enquanto (cont < expo) faca
+         re <- re * base
+         cont <- cont + 1
+fimenquanto
+se (expo = 0 ) entao
+   re <- 1
+fimse
+base <- re
+
+fimprocedimento
+
+Inicio
+escreval("escreva  a base")
+leia (base)
+escreval("escreva o expoente")
+leia (expo)
+potencia (base , expo)
+potenciaR (base , expo)
+escreval (" o resultado por passagem de valor e = " , base)
+
+Fimalgoritmo
+
+e)Algoritmo "semnome"
+Var
+n : inteiro
+
+procedimento poi( n : inteiro )
+var
+
+inicio
+se ( n % 2 = 0 ) entao
+    escreval (" e par")
+senao
+    escreval (" e impar")
+fimse
+
+fimprocedimento
+
+procedimento poiR( var n : inteiro)
+var
+
+
+inicio
+
+n <- n % 2
+
+fimprocedimento
+
+Inicio
+escreval("escreva o numero")
+leia (n)
+poi (n)
+poiR (n)
+se ( n = 0 ) entao
+     escreval (" e par")
+senao
+     escreval (" e impar")
+fimse
+
+Fimalgoritmo
+
+f)Algoritmo "semnome"
+Var
+base , base2 , base3: real
+
+procedimento potenciasoma( base : real ; base2 : real ; base3 : real)
+var
+re : real
+
+inicio
+
+re <- base^2 + base2^2 + base3^2
+
+escreval (" o resultado da soma e = " , re)
+
+fimprocedimento
+
+procedimento potenciasomaR( var base : real ; base2 : real ; base3 : real )
+var
+
+re :real
+
+inicio
+
+re <- base^2 + base2^2 + base3^2
+
+base <- re
+
+fimprocedimento
+
+Inicio
+escreval("escreva  a base")
+leia (base)
+escreval("escreva  a base2")
+leia (base2)
+escreval("escreva  a base3")
+leia (base3)
+
+potenciasoma (base , base2 , base3 )
+potenciasomaR (base , base2 , base3 )
+escreval (" o resultado da soma por passagem de valor e = " , base)
+
+
+Fimalgoritmo
+
+g)Algoritmo "semnome"
+Var
+base , base2 , base3: real
+
+procedimento potenciasoma( base : real ; base2 : real ; base3 : real)
+var
+re : real
+
+inicio
+
+re <- base + base2 + base3
+re <- re^2
+
+escreval (" o resultado da soma e = " , re)
+
+fimprocedimento
+
+procedimento potenciasomaR( var base : real ; base2 : real ; base3 : real )
+var
+
+re :real
+
+inicio
+
+re <- base + base2 + base3
+re <- re^2
+
+base <- re
+
+fimprocedimento
+
+Inicio
+escreval("escreva  a base")
+leia (base)
+escreval("escreva  a base2")
+leia (base2)
+escreval("escreva  a base3")
+leia (base3)
+
+potenciasoma (base , base2 , base3 )
+potenciasomaR (base , base2 , base3 )
+escreval (" o resultado da soma por passagem de valor e = " , base)
+
+
+Fimalgoritmo
+
+h)Algoritmo "semnome"
+Var
+c : real
+
+procedimento trans( c : real )
+var
+f : real
+
+inicio
+
+f <- (9* c + 160) /5
+
+escreval (" o resultado em fahrenheit e = " , f)
+
+fimprocedimento
+
+procedimento transR( var c : real )
+var
+
+f :real
+
+inicio
+
+f <- (9* c + 160) /5
+
+c <- f
+
+fimprocedimento
+
+Inicio
+escreval("escreva  a temp em celsius")
+leia (c)
+
+
+trans ( c )
+transR ( c )
+escreval (" o resultado em fahrenheit por passagem de valor e = " , c)
+
+
+Fimalgoritmo
+
+i)Algoritmo "semnome"
+Var
+dolar , cota : real
+
+procedimento trans( dolar : real ; cota : real )
+var
+rel : real
+
+inicio
+
+rel <- dolar * cota
+
+escreval (" o resultado em real e = " , rel)
+
+fimprocedimento
+
+procedimento transR( var dolar : real ; cota : real )
+var
+
+rel :real
+
+inicio
+
+rel <- dolar * cota
+dolar <- rel
+
+fimprocedimento
+
+Inicio
+escreval("escreva  a cotacao")
+leia (cota)
+escreval("escreva a quantidade de dolar")
+leia (dolar)
+
+
+trans ( dolar , cota )
+transR ( dolar , cota )
+escreval (" o resultado em real por passagem de valor e = " , dolar)
+
+
+Fimalgoritmo
+
+j)Algoritmo "semnome"
+Var
+valor : real
+
+procedimento ver( valor : real )
+var
+
+
+inicio
+se ( valor % 2 = 0) e (valor % 3 = 0) entao
+    escreval (" este valor e divisivel por 2 e 3 ")
+senao
+     escreval (" o valor invalido ")
+fimse
+
+fimprocedimento
+
+procedimento verR( var valor : real )
+var
+
+
+inicio
+
+se ( valor % 2 = 0) e (valor % 3 = 0) entao
+
+    valor <- 0
+senao
+
+     valor <- 1
+fimse
+
+fimprocedimento
+
+Inicio
+escreval("escreva o valor")
+leia (valor)
+
+
+
+ver ( valor )
+
+verR ( valor )
+se ( valor = 0) entao
+    escreval (" este valor e divisivel por 2 e 3 por referencia ")
+senao
+     escreval (" o valor invalido por referencia ")
+fimse
+
+
+Fimalgoritmo
+
+k)Algoritmo "semnome"
+Var
+valor : real
+
+procedimento ver( valor : real )
+var
+
+
+inicio
+se ( valor % 2 = 0) ou (valor % 3 = 0) entao
+    escreval (" este valor e divisivel por 2 ou 3 ")
+senao
+     escreval (" o valor invalido ")
+fimse
+
+fimprocedimento
+
+procedimento verR( var valor : real )
+var
+
+
+inicio
+
+se ( valor % 2 = 0) ou (valor % 3 = 0) entao
+
+    valor <- 0
+senao
+
+     valor <- 1
+fimse
+
+fimprocedimento
+
+Inicio
+escreval("escreva o valor")
+leia (valor)
+
+
+
+ver ( valor )
+
+verR ( valor )
+se ( valor = 0) entao
+    escreval (" este valor e divisivel por 2 ou 3 por referencia ")
+senao
+     escreval (" o valor invalido por referencia ")
+fimse
+
+
+Fimalgoritmo
+
+L)Algoritmo "semnome"
+Var
+valor : real
+
+procedimento ver( valor : real )
+var
+
+
+inicio
+se ( valor % 2 = 1) e (valor % 3 = 1) entao
+    escreval (" este valor nao e divisivel por 2 e 3 ")
+senao
+     escreval (" o valor invalido ")
+fimse
+
+fimprocedimento
+
+procedimento verR( var valor : real )
+var
+
+
+inicio
+
+se ( valor % 2 = 1) e (valor % 3 = 1) entao
+
+    valor <- 0
+senao
+
+     valor <- 1
+fimse
+
+fimprocedimento
+
+Inicio
+escreval("escreva o valor")
+leia (valor)
+
+
+
+ver ( valor )
+
+verR ( valor )
+se ( valor = 0) entao
+    escreval (" este valor nao e divisivel por 2 e 3 por referencia ")
+senao
+     escreval (" o valor invalido por referencia ")
+fimse
+
+
+Fimalgoritmo
+
+m)Algoritmo "semnome"
+Var
+valor : real
+
+procedimento ver( valor : real )
+var
+
+
+inicio
+se ( valor < 0)  entao
+    valor <- valor * -1
+    escreval ("valor = " ,valor)
+senao
+     escreval ("valor = " ,valor)
+fimse
+
+fimprocedimento
+
+procedimento verR( var valor : real )
+var
+
+
+inicio
+
+se ( valor < 0)  entao
+    valor <- valor * -1
+fimse
+
+fimprocedimento
+
+Inicio
+escreval("escreva o valor")
+leia (valor)
+ver ( valor )
+verR ( valor )
+escreval ("valor por referencia = " ,valor)
+
+
+Fimalgoritmo
+
+n)Algoritmo "semnome"
+Var
+nome  , sexo: caractere
+n : real
+
+procedimento ver( nome : caractere ; sexo : caractere )
+var
+
+
+inicio
+se ( sexo = "f" ) ou ( sexo = "F" )  entao
+    escreval ("llma . Sra " ,nome)
+senao
+     escreval ("llmo. Sr " ,nome)
+fimse
+
+fimprocedimento
+
+procedimento verR( var n : real ; nome : caractere ;  sexo : caractere )
+var
+
+
+inicio
+
+se ( sexo = "f" ) ou ( sexo = "F" )  entao
+    n <- 0
+senao
+     n <- 1
+fimse
+
+fimprocedimento
+
+Inicio
+escreval("escreva o seu nome")
+leia (nome)
+escreval("escreva o seu sexo")
+leia (sexo)
+
+
+
+ver ( nome , sexo )
+verR ( n , nome , sexo )
+se ( n = 0 ) entao
+    escreval ("llma . Sra por referencia " ,nome)
+senao
+     escreval ("llmo. Sr por referencia " ,nome)
+fimse
+
+
+Fimalgoritmo
+
+o)Algoritmo "semnome"
+Var
+valor : real
+
+procedimento fat( valor : real )
+var
+cont : real
+
+inicio
+cont <- valor - 1
+enquanto ( cont > 0)  faca
+    valor <- valor * cont
+    cont <- cont - 1
+fimenquanto
+
+se ( valor = 0 ) entao
+   valor <- 1
+fimse
+
+escreval ("fatorial do valor = " ,valor)
+
+fimprocedimento
+
+procedimento fatR( var valor : real )
+var
+cont : real
+
+inicio
+cont <- valor - 1
+enquanto ( cont > 0)  faca
+    valor <- valor * cont
+    cont <- cont - 1
+fimenquanto
+
+se ( valor = 0 ) entao
+   valor <- 1
+fimse
+
+fimprocedimento
+
+Inicio
+escreval("escreva o valor")
+leia (valor)
+fat ( valor )
+fatR ( valor )
+escreval ("fatorial do valor por referencia = " ,valor)
+
+
+Fimalgoritmo
+
+
+
+3.4
+funçao
+a)Algoritmo "semnome"
+Var
+n , soma , aux: inteiro
+
+funcao riboF( soma : inteiro ; n : inteiro) : inteiro
+var
+
+inicio
+enquanto ( n > 0 ) faca
+      soma <- soma + n
+      n <- n - 1
+fimenquanto
+retorne soma
+
+fimfuncao
+
+Inicio
+escreval("escreva o valor")
+leia (n)
+aux <- riboF (soma , n)
+escreval ("soma dos numeros ate o valor = ", aux)
+
+
+Fimalgoritmo
+
+
+b)Algoritmo "semnome"
+Var
+n , atu , ant , aux  : inteiro
+
+funcao fibof( ant : inteiro ; atu : inteiro ) : inteiro
+var
+
+prox : inteiro
+
+inicio
+      prox <- 1
+      prox <- ant + atu
+      retorne prox
+
+fimfuncao
+
+Inicio
+escreval("escreva o valor")
+leia (n)
+
+ant <- 0
+atu <- 1
+aux <- 1
+enquanto ( aux < n ) faca
+     escreval ("fiibonate ate o valor = ", aux)
+     aux <- fiboF (ant , atu)
+     ant <- atu
+     atu <- aux
+fimenquanto
+
+Fimalgoritmo
+
+c)Algoritmo "semnome"
+Var
+valor , taxa , temp : inteiro
+aux : real
+funcao prestacaoF( var x : real ; y : inteiro ;  z : inteiro) : real
+var
+
+inicio
+x <- x + (x * (y / 100) * z)
+retorne x
+
+fimfuncao
+
+Inicio
+escreval("escreva o valor")
+leia (valor)
+escreval("escreva a taxa")
+leia (taxa)
+escreval("escreva o tempo")
+leia (temp)
+
+aux <- prestacaoF (valor , taxa , temp)
+
+escreval ("prestacao = ",aux)
+
+
+Fimalgoritmo
+
+d)Algoritmo "semnome"
+Var
+base , expo , aux: inteiro
+
+funcao potenciaF( base : inteiro ; expo : inteiro)  : inteiro
+var
+
+re , cont:inteiro
+
+inicio
+
+re <- 1
+enquanto (cont < expo) faca
+         re <- re * base
+         cont <- cont + 1
+fimenquanto
+se (expo = 0 ) entao
+   re <- 1
+fimse
+retorne re
+
+fimfuncao
+
+Inicio
+escreval("escreva  a base")
+leia (base)
+escreval("escreva o expoente")
+leia (expo)
+aux <- potenciaF (base , expo)
+escreval (" o resultado e = " , aux)
+
+Fimalgoritmo
+
+e)Algoritmo "semnome"
+Var
+base , base2 , base3 , aux: real
+
+funcao potenciasomaF( base : real ; base2 : real ; base3 : real ) : real
+var
+
+re :real
+
+inicio
+
+re <- base^2 + base2^2 + base3^2
+
+retorne re
+
+fimfuncao
+
+Inicio
+escreval("escreva  a base")
+leia (base)
+escreval("escreva  a base2")
+leia (base2)
+escreval("escreva  a base3")
+leia (base3)
+
+aux <- potenciasomaF (base , base2 , base3 )
+escreval (" o resultado da soma e = " , aux)
+fimalgoritmo
+
+f)Algoritmo "semnome"
+Var
+base , base2 , base3 , aux: real
+
+funcao potenciasomaF( base : real ; base2 : real ; base3 : real ) : real
+var
+
+re :real
+
+inicio
+
+re <- base + base2 + base3
+re <- re^2
+retorne re
+
+fimfuncao
+
+Inicio
+escreval("escreva  a base")
+leia (base)
+escreval("escreva  a base2")
+leia (base2)
+escreval("escreva  a base3")
+leia (base3)
+
+aux <- potenciasomaF (base , base2 , base3 )
+escreval (" o resultado da soma e = " , aux)
+
+
+Fimalgoritmo
+
+g)Algoritmo "semnome"
+Var
+dolar , cota , aux: real
+
+funcao transF( dolar : real ; cota : real ) : real
+var
+
+rel :real
+
+inicio
+
+rel <- dolar * cota
+retorne rel
+
+fimfuncao
+
+Inicio
+escreval("escreva  a cotacao")
+leia (cota)
+escreval("escreva a quantidade de dolar")
+leia (dolar)
+
+aux <- transF ( dolar , cota )
+escreval (" o resultado em real e = " , aux)
+
+
+Fimalgoritmo
+
+h)Algoritmo "semnome"
+Var
+rel , cota , aux: real
+
+funcao transF( rel : real ; cota : real ) : real
+var
+
+dolar :real
+
+inicio
+
+dolar <- rel / cota
+retorne dolar
+
+fimfuncao
+
+Inicio
+escreval("escreva  a cotacao")
+leia (cota)
+escreval("escreva a quantidade de real")
+leia (rel)
+
+aux <- transF ( rel , cota )
+escreval (" o resultado em dolar e = " , aux)
+
+
+Fimalgoritmo
+
+i)Algoritmo "semnome"
+Var
+f , aux : real
+
+funcao transF( f : real ) : real
+var
+
+c :real
+
+inicio
+
+c <- (f - 32) * (5/9)
+
+retorne c
+
+fimfuncao
+
+Inicio
+escreval("escreva  a temp em fahrenheit")
+leia (f)
+
+aux <- transF ( f )
+escreval (" o resultado em celsius e = " , aux)
+
+
+Fimalgoritmo
+
+

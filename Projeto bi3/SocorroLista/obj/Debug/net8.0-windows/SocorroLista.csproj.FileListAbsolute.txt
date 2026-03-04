@@ -1,0 +1,16 @@
+C:\Users\Usuario1\source\repos\SocorroLista\SocorroLista\obj\Debug\net8.0-windows\SocorroLista.Form1.resources
+C:\Users\Usuario1\source\repos\SocorroLista\SocorroLista\obj\Debug\net8.0-windows\SocorroLista.csproj.GenerateResource.cache
+C:\Users\Usuario1\source\repos\SocorroLista\SocorroLista\obj\Debug\net8.0-windows\SocorroLista.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario1\source\repos\SocorroLista\SocorroLista\obj\Debug\net8.0-windows\SocorroLista.AssemblyInfoInputs.cache
+C:\Users\Usuario1\source\repos\SocorroLista\SocorroLista\obj\Debug\net8.0-windows\SocorroLista.AssemblyInfo.cs
+C:\Users\Usuario1\source\repos\SocorroLista\SocorroLista\obj\Debug\net8.0-windows\SocorroLista.csproj.CoreCompileInputs.cache
+C:\Users\Usuario1\source\repos\SocorroLista\SocorroLista\bin\Debug\net8.0-windows\SocorroLista.exe
+C:\Users\Usuario1\source\repos\SocorroLista\SocorroLista\bin\Debug\net8.0-windows\SocorroLista.deps.json
+C:\Users\Usuario1\source\repos\SocorroLista\SocorroLista\bin\Debug\net8.0-windows\SocorroLista.runtimeconfig.json
+C:\Users\Usuario1\source\repos\SocorroLista\SocorroLista\bin\Debug\net8.0-windows\SocorroLista.dll
+C:\Users\Usuario1\source\repos\SocorroLista\SocorroLista\bin\Debug\net8.0-windows\SocorroLista.pdb
+C:\Users\Usuario1\source\repos\SocorroLista\SocorroLista\obj\Debug\net8.0-windows\SocorroLista.dll
+C:\Users\Usuario1\source\repos\SocorroLista\SocorroLista\obj\Debug\net8.0-windows\refint\SocorroLista.dll
+C:\Users\Usuario1\source\repos\SocorroLista\SocorroLista\obj\Debug\net8.0-windows\SocorroLista.pdb
+C:\Users\Usuario1\source\repos\SocorroLista\SocorroLista\obj\Debug\net8.0-windows\SocorroLista.genruntimeconfig.cache
+C:\Users\Usuario1\source\repos\SocorroLista\SocorroLista\obj\Debug\net8.0-windows\ref\SocorroLista.dll

@@ -1,0 +1,6 @@
+	O JSON FICA COMO ARQUIVO DE TEXTO E USA PARA A CADASTRA(1) SO USA O MESMO METADO DO HTML DO GRAFICO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+(2)CONSULTAR USA O FISTINDEXOF PARA ACHAR O ID DAI USAR DE NOVO PARA ACHAR OQUE QUER DAI USAR E SUB STING PARA PEGAR OQUE QUER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+(3)ALTERAR SUAR MESMO METADO DO 2 MAS USAR ALGUM COMANDO PARA SUBSTITUIR TEXTO NUMA AREA?!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+(4)EXCLUR USAR ID PRA ACHAR ONDE ESTAR DAI ACHAR AS CHAVES { 		E EXCLUR TUDO COM O METADO DO 3!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+							      "id": 1,
+							   }

@@ -1,0 +1,709 @@
+1- e uma programa que habilita o usuaria a enteragir com ducomentos em um servidor web
+2- google , firefox , safari e opera gx
+3- ele hospeta a pagina e envia as informaçoes para seu computador pare visualizar a pagina
+4- e um desenvolvedor que possui habilitade para programar no frontend e backend de um servidor
+5- e a pessoa que programa focado no server oque seria na parte que o usuaria nao ve
+6- e um servidor web
+7- e um tipo de servidor web que ajuda desenvolvedores de sites
+8- documentos estaticos presisam ser alterados por um desevolvedor um documento dinamico pode se alterar de acordo com
+o usuario pro exemplo um site de compras
+9- e o Protocolo de Transferência de Hipertexto que define padroes e regras de comunicaçao entre usuarios e servers
+10- em : C:\xampp\htdocs\nomeAluno
+11- e uma ferramenta utilizada para desenvolver páginas na internet para facilitar seu processo de criaçao
+12-nao , e uma linguagem de marcaçao e elas criam documentos estruturados nao programas
+
+13-<!DOCTYPE html>
+<html>
+<body>
+<h1>LUIZ MIGUEL</h1>
+<h2>LUIZ MIGUEL</h2>
+<h3>LUIZ MIGUEL</h3>
+<h4>LUIZ MIGUEL</h4>
+<h5>LUIZ MIGUEL</h5>
+<h6>LUIZ MIGUEL</h6>
+</body>
+</html>
+
+14-<!DOCTYPE html>
+<html>
+<body>
+<h1><br><br><b>L</b><i>U</i><u>I</u><b>Z</b> <i>M</i><u>I</u><b>G</b><i>U</i><u>E</u><b>L</b></h1>
+</body>
+</html>
+
+15-<!DOCTYPE html>
+<html>
+<body>
+<h1><br><br><b>LUIZ</b> <i>MIGUEL</i></h1>
+</body>
+</html>
+
+16-<!DOCTYPE html>
+<html>
+<body>
+<h1><b> LUIZ MIGUEL </b></h1>
+<h1><i> LUIZ MIGUEL </i></h1>
+<h1><u> LUIZ MIGUEL </u></h1>
+</body>
+</html>
+
+17-<!DOCTYPE html>
+<html>
+<body>
+<p>filmes que gosto:</p>
+<ul>
+    <li> Poderoso Chefão</li>
+    <li>A Lista de Schindler</li>
+    <li>Um Sonho de Liberdade</li>
+    <li>Forrest Gump</li>
+    <li> Rei Leão</li>
+    <li> Senhor dos Anéis</li>
+    <li>À Espera de um Milagre</li>
+    <li>A Vida é Bela</li>
+    <li>Batman - O Cavaleiro Das Trevas</li>
+    <li> Poderoso Chefão 2</li>
+</ul>
+<p>musicas que gosto:</p>
+<ul>
+    <li>Leão – Marília Mendonça</li>
+    <li>Erro Gostoso (Ao Vivo) – Simone Mendes</li>
+    <li>Desejo Imortal (It Must Have Been Love) – Gusttavo Lima</li>
+    <li>Nosso Quadro – AgroPlay + Ana Castela</li>
+    <li>Bombonzinho – Israel e Rodolffo + Ana Castela</li>
+    <li>Oi Balde (Ao Vivo) – Zé Neto e Cristiano</li>
+    <li>Eu Gosto Assim – Gustavo Mioto + Mari Fernandez</li>
+    <li>Traumatizei (Ao Vivo) – Henrique e Juliano</li>
+    <li>A Culpa é Nossa – Maiara e Maraisa</li>
+    <li>Calm Down part Rema – Selena Gomez</li>
+</ul>
+</body>
+</html>
+
+18-<!DOCTYPE html>
+<html>
+<body>
+    <h1>10 Filmes</h1>
+    <ol>
+      <li><b>O Poderoso Chefao</b></li>
+      <li><i>O Senhor dos Aneis</i></li>
+      <li><u>Pulp Fiction</u></li>
+      <li><b>O Resgate do Soldado Ryan</b></li>
+      <li><i>O Labirinto do Fauno</i></li>
+      <li><u>Cidade de Deus</u></li>
+      <li><b>A Vida e Bela</b></li>
+      <li><i>O Tigre e o Dragao</i></li>
+      <li><u>A Origem</u></li>
+      <li><b>12 Anos de Escravidao</b></li>
+    </ol>
+  
+    <h1>10 Musicas</h1>
+    <ol>
+      <li><b>Imagine</b></li>
+      <li><i>Yesterday</i></li>
+      <li><u>Like a Rolling Stone</u></li>
+      <li><b>Stairway to Heaven</b></li>
+      <li><i>Bohemian Rhapsody</i></li>
+      <li><u>Billie Jean</u></li>
+      <li><b>Thriller</b></li>
+      <li><i>Sweet Child o' Mine</i></li>
+      <li><u>Livin' on a Prayer</u></li>
+      <li><b>Never Gonna Give You Up</b></li>
+    </ol>
+  
+    <h1>10 Animais</h1>
+    <ol>
+      <li><b>Leao</b></li>
+      <li><i>Tigre</i></li>
+      <li><u>Elefante</u></li>
+      <li><b>Girafa</b></li>
+      <li><i>Urso polar</i></li>
+      <li><u>Panda gigante</u></li>
+      <li><b>Crocodilo</b></li>
+      <li><i>Cobra</i></li>
+      <li><u>Tartaruga</u></li>
+      <li><b>Cavalo</b></li>
+    </ol>
+  
+    <h1>10 Amigos</h1>
+    <ol>
+      <li><b>Joao</b></li>
+      <li><i>Maria</i></li>
+      <li><u>Jose</u></li>
+      <li><b>Ana</b></li>
+      <li><i>Pedro</i></li>
+      <li><u>Lucas</u></li>
+      <li><b>Miguel</b></li>
+      <li><i>Fernanda</i></li>
+      <li><u>Ricardo</u></li>
+      <li><b>luiz Miguel</b></li>
+    </ol>
+</body>
+</html>
+
+19-<!DOCTYPE html>
+<html>
+<body>
+<table>
+    <tr>
+      <th>Produto</th>
+      <th>Preco</th>
+    </tr>
+    <tr>
+      <td>Leite</td>
+      <td>R$ 4,00</td>
+    </tr>
+    <tr>
+      <td>Pao</td>
+      <td>R$ 2,00</td>
+    </tr>
+    <tr>
+      <td>Ovos</td>
+      <td>R$ 10,00</td>
+    </tr>
+    <tr>
+      <td>Carne</td>
+      <td>R$ 20,00</td>
+    </tr>
+    <tr>
+      <td>Feijao</td>
+      <td>R$ 10,00</td>
+    </tr>
+    <tr>
+      <td>Arroz</td>
+      <td>R$ 5,00</td>
+    </tr>
+    <tr>
+      <td>Macarrao</td>
+      <td>R$ 3,00</td>
+    </tr>
+    <tr>
+      <td>Biscoito</td>
+      <td>R$ 2,00</td>
+    </tr>
+    <tr>
+      <td>Chocolate</td>
+      <td>R$ 5,00</td>
+    </tr>
+    <tr>
+      <td>Refrigerante</td>
+      <td>R$ 5,00</td>
+    </tr>
+</table>
+</body>
+</html>
+
+20-<!DOCTYPE html>
+<html>
+<body>
+  <h1>Sobre mim</h1>
+    <sub> gosto de jogar video games e programar.</sub>
+    <br>
+    <b>Eu sou um otimo programador.</b>
+    <br>
+    <i>Eu posso programar programas.</i>
+    <br>
+    <em>Eu tambem posso escrever programas.</em>
+    <br>
+    <mark>eu gosto de ouvir musica</mark>
+    <br>
+    <small>nao tem problema escrever essas coisas aqui nao ne?...</small>
+    <br>
+    <del>|\(0-0)/| -> |\(x-x)/| </del>
+    <br>
+    <ins>bom dia so</ins>
+</body>
+</html>
+
+21-<!DOCTYPE html>
+<html>
+<body>
+  <h1 align="right">Meu Nome Completo</h1>
+  <br>
+  <img align="right" src="imgs/eu e cobra.jpg">
+</body>
+</html>
+
+22-<!DOCTYPE html>
+<html>
+<body>
+  <img align="center" src= "imgs/eu e cobra.jpg">
+  <br>
+  <p align="right"><b><i>eu segurando um cobra no zoologico ela e bem lisinha e fofinha</i></b></p>
+</body>
+</html>
+
+23-<!DOCTYPE html>
+<html>
+<body>
+    <h1 align="right"><b>luiz miguel de barros santos</b></h1>
+    <br>
+  <h1 align="center"><i>luiz miguel de barros santos</i></h1>
+</body>
+</html>
+
+24-<!DOCTYPE html>
+<html>
+<body>
+  <h1>O que e um navegador?</h1>
+  <p>Um navegador e um software que permite acessar e visualizar paginas da Internet</p>
+  <img src="imgs/navegador o avatar.jpg">
+
+  <h1>O que e um servidor?</h1>
+  <p>Um servidor e um computador que armazena e fornece conteudo da Internet , os servidores sao conectados a Internet e podem ser acessados por qualquer pessoa</p>
+  <img src="imgs/servidor(img).jpg">
+
+  <h1>O que e HTTP?</h1>
+  <p>HTTP e um protocolo de comunicação que permite que os navegadores se comuniquem com os servidores</p>
+  <img src="imgs/httpis.jpg">
+
+  <h1>O que e WWW?</h1>
+  <p>WWW e a sigla para World Wide Web</p>
+  <img src="imgs/www(1990 ver).jpg">
+
+  <h1>O que e HTML?</h1>
+  <p>HTML e a sigla para Hypertext Markup Language que e uma linguagem de marcação que e usada para criar paginas da Internet</p>
+  <img src="imgs/html disso.jpg">
+</body>
+</html>
+
+25-<!DOCTYPE html>
+<html>
+<body>
+  <table>
+    <tr>
+      <th>Nome</th>
+      <th>matricula</th>
+    </tr>
+    <tr>
+      <td>Joao</td>
+      <td>50230111</td>
+    </tr>
+    <tr>
+      <td>Maria</td>
+      <td>50230069</td>
+    </tr>
+    <tr>
+      <td>luiz</td>
+      <td>50230685</td>
+    </tr>
+  </table>
+</body>
+</html>
+
+26-<!DOCTYPE html>
+<html>
+<body>
+<h1 style="color: green;">luiz miguel de barros santos</h1>
+</body>
+</html>
+
+27-<!DOCTYPE html>
+<html>
+<body>
+  <h1 style="color: green;">luiz miguel de barros santos</h1>
+  <h2 style="color: blue;">luiz miguel de barros santos</h2>
+  <h3 style="color: red;">luiz miguel de barros santos</h3>
+  <h4 style="color: orange;">luiz miguel de barros santos</h4>
+  <h5 style="color: yellow;">luiz miguel de barros santos</h5>
+  <h6 style="color: purple;">luiz miguel de barros santos</h6>
+</body>
+</html>
+
+28-<!DOCTYPE html>
+<html>
+<body>
+    <table style="width:100%" border="1">
+        <tr>
+          <td>frutinhas sululentas que fazem bem a saude</td>
+          <td><img src="imgs/frutinha.jpg"</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+29-<!DOCTYPE html>
+<html>
+<body>
+    <table style="width:100%" border="1">
+        <tr >
+            <td colspan="3" align="center">cabecalho</td>
+        </tr>
+        <tr>
+            <td colspan="1"><br> menu da esquerda <br><br></td>
+            <td colspan="1">conteudo superior <br> conteudo inf erior </td>
+            <td colspan="1"><br> menu da direita <br><br></td>
+        </tr>
+        <tr >
+            <td colspan="3" align="center">rodape</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+30-<!DOCTYPE html>
+<html>
+<body>
+    <img src="imgs/eu e cobra.jpg" width="1000" height="1000">
+    <br>
+    <img src="imgs/eu e cobra.jpg" width="500" height="500">
+    <br>
+    <img src="imgs/eu e cobra.jpg" width="250" height="250">
+    <br>
+    <img src="imgs/eu e cobra.jpg" width="120" height="120">
+</body>
+</html>
+
+31-a)<!DOCTYPE html>
+<html>
+<head>
+  <title>saobernardo.html</title>
+</head>
+<body>
+  <h1>sao bernardo</h1>
+  <p>o sao bernardo e uma raca de cachorro originaria da suica e uma raca grande e robusta com uma pelagem branca e preta os sao bernardos sao conhecidos por sua gentileza e sua natureza protetora</p>
+  <img src="imgs/sao bernado big dog.jpg">
+  <img src="imgs/sao bernado big dog.jpg">
+  <img src="imgs/sao bernado big dog.jpg">
+</body>
+</html>
+
+31-b)<!DOCTYPE html>
+<html>
+<head>
+  <title>Pastor Alemao.html</title>
+</head>
+<body>
+  <h1>Pastor Alemao</h1>
+  <p>O Pastor Alemao e uma raca de cachorro originaria da Alemanha e uma raça grande e robusta , com uma pelagem preta , marrom ou cinza os Pastores Alemaes sao conhecidos por sua inteligencia , sua obediencia e sua natureza protetora.</p>
+  <img src="imgs/pastor alemao.jpg">
+  <img src="imgs/pastor alemao.jpg">
+  <img src="imgs/pastor alemao.jpg">
+</body>
+</html>
+
+31-c)<!DOCTYPE html>
+<html>
+<head>
+  <title>Cocker Spaniel.html</title>
+</head>
+<body>
+  <h1>Cocker Spaniel</h1>
+  <p>O Cocker Spaniel e uma raca de cachorro originaria da Inglaterra e uma raca pequena e agil , com uma pelagem longa e sedosa os Cocker Spaniels sao conhecidos por sua gentileza e sua natureza brincalhona.</p>
+  <img src="imgs/Cocker Spaniel.jpg">
+  <img src="imgs/Cocker Spaniel.jpg">
+  <img src="imgs/Cocker Spaniel.jpg">
+</body>
+</html>
+
+31-d)<!DOCTYPE html>
+<html>
+<head>
+  <title>Guia de Racas.html</title>
+</head>
+<body>
+  <h1>Guia de Racas</h1>
+  <p>Este guia apresenta uma breve descrição de tres raças de cachorro: Sao Bernardo, Pastor Alemao e Cocker Spaniel.</p>
+  <ul>
+    <img src="imgs/sao bernado big dog.jpg">
+    <li><a href="http://127.0.0.1/luizmiguel/31-a).html">São Bernardo</a></li>
+    <img src="imgs/pastor alemao.jpg">
+    <li><a href="http://127.0.0.1/luizmiguel/31-b).html">Pastor Alemão</a></li>
+    <img src="imgs/Cocker Spaniel.jpg">
+    <li><a href="http://127.0.0.1/luizmiguel/31-c).html">Cocker Spaniel</a></li>
+  </ul>
+</body>
+</html>
+
+32-<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Pagina com fundo azul</title>
+</head>
+<body>
+    <div class="bg-primary p-5"><h1>Esta pagina tem fundo azul</h1></div>
+    <div class="bg-primary p-5"></div>
+    <div class="bg-primary p-5"></div>
+    <div class="bg-primary p-5"></div>
+    <div class="bg-primary p-5"></div> 
+    <div class="bg-primary p-5"></div>
+    <div class="bg-primary p-5"></div>
+    <div class="bg-primary p-5"></div>
+    <div class="bg-primary p-5"></div>
+    <div class="bg-primary p-4"></div>
+</body>
+</html>
+
+33-<!DOCTYPE html>
+<html>
+<body>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<h1> no css voce tem esquemas de cores pre selecionasdas para cituacoes especificas como:</h1>
+<p class="text-muted">text-muted = Este texto esta atenuado.</p>
+<p class="text-primary">text-primary = Este texto e importante.</p>
+<p class="text-success">text-success = Este texto indica sucesso.</p>
+<p class="text-info">text-info = Este texto representa alguma informacao.</p>
+<p class="text-warning">text-warning = Este texto representa um aviso.</p>
+<p class="text-danger">text-danger = Este texto representa perigo.</p>
+<p class="text-secondary">text-secondary = Texto secundario.</p>
+<p class="text-dark">text-dark = Este texto e cinza escuro.</p>
+<p class="text-body">text-body = Cor padrão do corpo (geralmente preto).</p>
+<p class="text-light">text-light = Este texto e cinza claro (em fundo branco).</p>
+<p class="text-white">text-white = Este texto e branco (em fundo branco).</p>
+</body>
+</html>
+
+34-<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    h1 {
+      border: 1px solid red;
+      color: red;
+    }
+
+    h2 {
+      border: 1px solid green;
+      color: green;
+    }
+
+    h3 {
+      border: 1px solid blue;
+      color: blue;
+    }
+
+    h4 {
+      border: 1px solid orange;
+      color: orange;
+    }
+
+    h5 {
+      border: 1px solid yellow;
+      color: yellow;
+    }
+
+    h6 {
+      border: 1px solid black;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Este e um titulo H1</h1>
+  <h2>Este e um titulo H2</h2>
+  <h3>Este e um titulo H3</h3>
+  <h4>Este e um titulo H4</h4>
+  <h5>Este e um titulo H5</h5>
+  <h6>Este e um titulo H6</h6>
+</body>
+</html>
+
+35-<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    h1 {
+      margin-top: 0;
+      margin-bottom: 1em;
+    }
+
+    h2 {
+      margin-top: 0.5em;
+      margin-bottom: 1em;
+    }
+
+    h3 {
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+
+    h4 {
+      margin-top: 1.5em;
+      margin-bottom: 1em;
+    }
+
+    h5 {
+      margin-top: 2em;
+      margin-bottom: 1em;
+    }
+
+    h6 {
+      margin-top: 2.5em;
+      margin-bottom: 1em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Este e um titulo H1</h1>
+  <h2>Este e um titulo H2</h2>
+  <h3>Este e um titulo H3</h3>
+  <h4>Este e um titulo H4</h4>
+  <h5>Este e um titulo H5</h5>
+  <h6>Este e um titulo H6</h6>
+</body>
+</html>
+
+36-<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .my-class {
+      color: red;
+      margin-top: 0;
+      margin-bottom: 1em;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="my-class">Este e um titulo H1</h1>
+  <h2 class="my-class">Este e um titulo H2</h2>
+  <h3 class="my-class">Este e um titulo H3</h3>
+  <h4 class="my-class">Este e um titulo H4</h4>
+  <h5 class="my-class">Este e um titulo H5</h5>
+  <h6 class="my-class">Este e um titulo H6</h6>
+</body>
+</html
+
+37-<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .my-class {
+      color: red;
+      margin-top: 0;
+      margin-bottom: 1em;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+<div>
+    <h1 class="my-class">luiz miguel de barros santos</h1>
+    <h2 class="my-class">luiz miguel de barros santos</h2>
+    <h3 class="my-class">luiz miguel de barros santos</h3>
+    <h4 class="my-class">luiz miguel de barros santos</h4>
+    <h5 class="my-class">luiz miguel de barros santos</h5>
+    <h6 class="my-class">luiz miguel de barros santos</h6>
+</div>
+</body>
+</html
+
+44-<!DOCTYPE html>
+<html>
+<head>
+  <title>Loja Online</title>
+</head>
+<body>
+  <h1>Loja Online</h1>
+
+  <div class="produtos">
+    <div class="produto">
+      <img src="imgs/laptop1.jpg">
+      <h2>Produto 1</h2>
+      <p>Descricao do produto 1</p>
+      <p>R$ 100,00</p>
+    </div>
+    <div class="produto">
+      <img src="imgs/laptop2.jpg">
+      <h2>Produto 2</h2>
+      <p>Descricao do produto 2</p>
+      <p>R$ 200,00</p>
+    </div>
+    <div class="produto">
+      <img src="imgs/laptop3.jpg">
+      <h2>Produto 3</h2>
+      <p>Descricao do produto 3</p>
+      <p>R$ 300,00</p>
+    </div>
+  </div>
+</body>
+</html>
+
+45-<!DOCTYPE html>
+<html>
+<body>
+  <h1>Curriculo Online</h1>
+
+  <div class="dados-pessoais">
+    <h2>Dados Pessoais</h2>
+    <p>Nome: Joao da Silva</p>
+    <p>Endereço: Rua das Flores, 123</p>
+    <p>CEP: 12345-678</p>
+    <p>Telefone: (11) 9999-9999</p>
+    <p>E-mail: joao.da.silva@email.com</p>
+  </div>
+
+  <div class="formacao">
+    <h2>Formacao</h2>
+    <ul>
+      <li>Graduacao em Engenharia Civil, Universidade de Sao Paulo</li>
+      <li>Mestrado em Engenharia Civil, Universidade Federal do Rio de Janeiro</li>
+    </ul>
+  </div>
+
+  <div class="experiencia-profissional">
+    <h2>Experiencia Profissional</h2>
+    <ul>
+      <li>Engenheiro Civil, Empresa X, 2010-2015</li>
+      <li>Gerente de Projetos, Empresa Y, 2015-2020</li>
+    </ul>
+  </div>
+
+  <div class="habilidades">
+    <h2>Habilidades</h2>
+    <ul>
+      <li>Linguagem de Programacao X</li>
+      <li>Linguagem de Programacao Y</li>
+      <li>Linguagem de Programacao Z</li>
+    </ul>
+  </div>
+
+  <div class="idiomas">
+    <h2>Idiomas</h2>
+    <ul>
+      <li>Ingles Fluente</li>
+      <li>Espanhol Basico</li>
+    </ul>
+  </div>
+</body>
+</html>
+
+46-<!DOCTYPE html>
+<html>
+<body>
+  <h1>exercicios</h1>
+  <ul>
+    <li><a href="http://127.0.0.1/luizmiguel/(13)lista%20de%20site.html">ex 13</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/14.html">ex 14</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/15.html">ex 15</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/16.html">ex 16</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/17.html">ex 17</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/18.html">ex 18</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/19.html">ex 19</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/20.html">ex 20</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/21.html">ex 21</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/22.html">ex 22</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/23.html">ex 23</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/24.html">ex 24</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/25.html">ex 25</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/26.html">ex 26</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/27.html">ex 27</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/28.html">ex 28</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/29.html">ex 29</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/30.html">ex 30</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/31-a)3.html">ex 31-a)</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/31-b).html">ex 31-b)</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/31-c).html">ex 31-c)</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/31-d).html">ex 31-d)</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/32.html">ex 32</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/33.html">ex 33</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/34.html">ex 34</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/35.html">ex 35</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/36.html">ex 36</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/37.html">ex 37</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/44.html">ex 44</a></li>
+    <li><a href="http://127.0.0.1/luizmiguel/45.html">ex 45</a></li>
+  </ul>
+</body>
+</html>

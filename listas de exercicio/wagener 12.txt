@@ -1,0 +1,215 @@
+1-
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WinFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string res = textBox1.Text.ToLower();
+            int compri = res.Length;
+            int contadorA = 0;
+            int contadorE = 0;
+            int contadorI = 0;
+            int contadorO = 0;
+            int contadorU = 0;
+            //string res = res;
+
+            bool verdade = res.Contains("a");
+            bool a = res.Contains("a");
+            if (a == true)
+            {
+                while (verdade == true)
+                {
+                    compri = res.Length;
+                    verdade = res.Contains("a");
+                    int n1 = 1 + res.IndexOf("a");
+                    int compri2 = compri - n1;
+                    res = res.Substring(n1, compri2);
+                    contadorA++;
+                }
+                contadorA = contadorA - 1;
+                textBox2.AppendText(string.Format("As:" + contadorA.ToString() + Environment.NewLine));
+            }
+
+
+            res = textBox1.Text.ToLower();
+            verdade = res.Contains("e");
+            bool ee = res.Contains("e");
+            if (ee == true) {
+                while (verdade == true)
+                {
+                    compri = res.Length;
+                    verdade = res.Contains("e");
+                    int n1 = 1 + res.IndexOf("e");
+                    int compri2 = compri - n1;
+                    res = res.Substring(n1, compri2);
+                    contadorE++;
+                }
+                contadorE = contadorE - 1;
+                textBox2.AppendText(string.Format("Es:" + contadorE.ToString() + Environment.NewLine));
+            }
+
+            res = textBox1.Text.ToLower();
+            verdade = res.Contains("i");
+            bool ii = res.Contains("i");
+            if (ii == true)
+            {
+                while (verdade == true)
+                {
+                    compri = res.Length;
+                    verdade = res.Contains("i");
+                    int n1 = 1 + res.IndexOf("i");
+                    int compri2 = compri - n1;
+                    res = res.Substring(n1, compri2);
+                    contadorI++;
+                }
+                contadorI = contadorI - 1;
+                textBox2.AppendText(string.Format("Is:" + contadorI.ToString() + Environment.NewLine));
+            }
+
+            res = textBox1.Text.ToLower();
+            verdade = res.Contains("o");
+            bool o = res.Contains("o");
+            if (o == true)
+            {
+                while (verdade == true)
+                {
+                    compri = res.Length;
+                    verdade = res.Contains("o");
+                    int n1 = 1 + res.IndexOf("o");
+                    int compri2 = compri - n1;
+                    res = res.Substring(n1, compri2);
+                    contadorO++;
+                }
+                contadorO = contadorO - 1;
+                textBox2.AppendText(string.Format("Os:" + contadorO.ToString() + Environment.NewLine));
+            }
+
+            res = textBox1.Text.ToLower();
+            verdade = res.Contains("u");
+            bool u = res.Contains("u");
+            if (u == true)
+            {
+                while (verdade == true)
+                {
+                    compri = res.Length;
+                    verdade = res.Contains("u");
+                    int n1 = 1 + res.IndexOf("u");
+                    int compri2 = compri - n1;
+                    res = res.Substring(n1, compri2);
+                    contadorU++;
+                }
+                contadorU = contadorU - 1;
+                textBox2.AppendText(string.Format("Us:" + contadorU.ToString() + Environment.NewLine));
+            }
+
+            if (a == false && ee == false && ii == false && o == false && u == false)
+                textBox2.Text = "0 vogais";
+            //int x = res.Length;
+        }
+    }
+}
+
+2-
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
+
+namespace WinFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        // Evento
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            string res = textBox1.Text;
+            int compri = res.Length;
+            if (compri % 2 == 1)
+            {
+                string parte1 = res.Substring(0, (compri / 2) + 1);
+                string parte2 = res.Substring(compri / 2, compri - (compri / 2));
+                textBox1.Text = parte1;
+                textBox2.Text = parte2;
+            }
+            else
+            {
+                string parte1 = res.Substring(0, compri / 2);
+                string parte2 = res.Substring(compri / 2, compri / 2);
+                textBox1.Text = parte1;
+                textBox2.Text = parte2;
+
+                int x = 0;
+                int y = 1;
+                while (x < compri/2)
+                {
+                    if (parte2.Substring(parte2.Length - y, 1) == parte1.Substring(x, 1))
+                    {
+                        x++;
+                        y++;
+                        
+                    }
+                    else
+                    {
+                        label1.Text = "nao palindromo";
+                        break;
+                        
+                    }
+                    label1.Text = "palindromo";
+                }
+            } 
+
+        }
+    }
+}
+
+3-
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
+
+namespace WinFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        // Evento
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            string mucho_texto = textBox1.Text.ToLower();
+            //string replacionaitor = textBox2.Text;
+
+            string[] alllines = textBox2.Text.ToLower().Split('\n');
+            string replacionaitor = alllines[0];
+            string replacionaitor_alvo = alllines[1];
+
+            label1.Text = mucho_texto.Replace(replacionaitor_alvo,replacionaitor);
+
+        }
+    }
+}

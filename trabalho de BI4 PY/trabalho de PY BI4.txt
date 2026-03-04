@@ -1,0 +1,111 @@
+Para alterarmos uma planilha excel já existente, podemos gravar os dados processados e armazenados num DataFrame
+na referida tabela, fazendo com que a tabela original seja alterada.
+Para isso usaremos o método to_excel. Veja sintaxe básica abaixo:
+df.to_excel('caminhonomearquivo', sheet_name = 'nomeplanilha', na_rep = '#N/A', header = True, index = False)
+Onde:
+to_excel = método do objeto DataFrame do pandas que gera uma tabela excel.
+
+sheet_name = para indicarmos o nome da planilha que será criada dentro do arquivo excel
+
+na_rep = indicamos ‘#N/A’ para o caso de existirem células vazias. Caso omita irá inserir ‘NaN’ nas células vazias
+
+header = indicamos True para informar que os títulos das colunas serão os mesmos do DataFrame já criado
+
+index = indicamos False para que a tabela não seja gerada com os índices de linhas do DataFrame 
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+import pandas as pd
+import openpyxl
+
+##########pegar info pra EXCEL################
+
+#ALTERAR CAMINHOS PARA SE IGULAR AO PEDIDO DO WORD
+#df.to_excel('C:/Users/X7 Informática/Desktop/Nova pasta/NOTASFINAISALUNOS.xlsx', sheet_name = 'planilha1', na_rep = '#N/A', header = True, index = False)
+#arquivo = open(f'C:/Users/X7 Informática/Desktop/Nova pasta/{dicionario["Matricula"][x]}.html', 'w')
+
+quant = int(input("quantos entradas de alunos deseja inserir: "))
+
+dicionario = {'Matricula': [], 'Alunos': [], 'PVB': [],
+              'PAW': [], 'BD': [], 'POOI': [], 'Media': []}
+
+for x in range(0,quant):
+    dicionario['Matricula'].append(input("Matricula: "))
+    while len(dicionario['Matricula'][x]) > 6 or dicionario['Matricula'][x].isalpha() == True:
+        dicionario['Matricula'][x] = (input("Matricula(denovo): "))
+    dicionario['Alunos'].append(input("Aluno: "))
+    while dicionario['Alunos'][x].isalpha() == False:
+        dicionario['Alunos'][x] = (input("Aluno(denovo): "))
+    #y = round(float(input("PVB: ")),1)
+    dicionario['PVB'].append(round(float(input("PVB: ")),1))
+    while dicionario['PVB'][x] < 0 or dicionario['PVB'][x] > 10 or isinstance(dicionario['PVB'][x] , float) == False:
+        dicionario['PVB'][x] = (float(input("PVB(denovo): ")))
+    dicionario['PAW'].append(round(float(input("PAW: ")),1))
+    while dicionario['PAW'][x] < 0 or dicionario['PAW'][x] > 10 or isinstance(dicionario['PAW'][x] , float) == False:
+        dicionario['PAW'][x] = (float(input("PAW(denovo): ")))
+    dicionario['BD'].append(round(float(input("BD: ")), 1))
+    while dicionario['BD'][x] < 0 or dicionario['BD'][x] > 10 or isinstance(dicionario['BD'][x], float) == False:
+        dicionario['BD'][x] = (float(input("BD(denovo): ")))
+    dicionario['POOI'].append(round(float(input("POOI: ")), 1))
+    while dicionario['POOI'][x] < 0 or dicionario['POOI'][x] > 10 or isinstance(dicionario['POOI'][x], float) == False:
+        dicionario['POOI'][x] = (float(input("POOI(denovo): ")))
+    print(len(dicionario['Matricula']))
+
+#dicionario = {'Matricula': ['500600','500700','500800'], 'Alunos': ['Jão','jeremias','Naconda'], 'PVB': [7,10,5],
+#              'PAW': [8,10,6,], 'BD': [8,10,7,], 'POOI': [7,10,9,], 'Media': []}
+for x in range(0,len(dicionario['Matricula'])):
+    n1 = x + 1
+    print(f'X = {n1}')
+    dicionario['Media'].append(round(((dicionario['PVB'][x] + dicionario['PAW'][x] + dicionario['BD'][x] + dicionario['POOI'][x]) / 4) , 1))
+
+print(dicionario)
+##########Cria EXCEL################
+df = pd.DataFrame(dicionario)
+print(df)
+df.to_excel('C:/PROJETO4BIMESTRE/NOTASFINAISALUNOS.xlsx', sheet_name = 'planilha1', na_rep = '#N/A', header = True, index = False)
+
+#p = pd.read_excel(r'C:/Users/aluno/Desktop')
+
+###########criar HTML##########################
+if input("deseja gerar um arquivo html para expor as notas de cada aluno na planilha--sim/nao: ") == 'sim':
+    try:
+        for x in range(0, len(dicionario['Matricula'])):
+            arquivo = open(f'C:/PROJETO4BIMESTRE/{dicionario["Matricula"][x]}.html', 'w')
+
+            arquivo.write(f'<title>{dicionario["Matricula"][x]}</title>\n')
+            if dicionario["Media"][x] >= 6:
+                status_of_the_situation = "APROVADO"
+                color = "blue"
+            elif dicionario["Media"][x] >= 3.75 and dicionario["Media"][x] <= 5.9:
+                status_of_the_situation = "EXAME FINAL"
+                color = "yellow"
+            else:
+                status_of_the_situation = "RETIDO"
+                color = "red"
+
+            arquivo.write(f'''<center><div style="text-align:center"><h1>RESULTADO FINAL ANUAL DE ALUNOS</h1></div>
+<div style="text-align:center"><h3>Matricula: {dicionario["Matricula"][x]}</h3></div>
+<div style="text-align:center"><h3>Aluno: <tr><tb style="background-color: red">{dicionario["Alunos"][x]}</tb></tr></h3></div></center>
+
+<table align="center" bgcolor="{color}" border="1">
+    <tr><!--linha 1-->
+        <td>PVB</td>
+        <td>PAW</td>
+        <td>BD</td>
+        <td>POOI</td>
+        <td>MEDIA</td>
+    </tr>
+    <tr><!--linha 2-->
+        <td>{dicionario["PVB"][x]}</td>
+        <td>{dicionario["PAW"][x]}</td>
+        <td>{dicionario["BD"][x]}</td>
+        <td>{dicionario["POOI"][x]}</td>
+        <td>{dicionario["Media"][x]}</td>
+    </tr>
+</table>
+
+<div style="text-align:center"><h3>Situação final: <tr><tb style="background-color: {color}">{status_of_the_situation}</tb></tr></h3></div></center>
+''')
+            arquivo.close()
+    except Exception as erro:
+        print(f"ERRO: {erro}")

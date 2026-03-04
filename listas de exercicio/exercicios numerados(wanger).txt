@@ -1,0 +1,134 @@
+1-using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WinFormsApp2
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string[] alllines = textBox1.Text.Split('\n');
+            int n = int.Parse(alllines[0]);
+            for (int x = 1; x <= n; x = x + 1)
+            {
+                float r = float.Parse(alllines[x]);
+                float d = r / 5;
+                textBox2.AppendText(string.Format("${0:G}", d) + Environment.NewLine + string.Format("{0:C2}", r) + Environment.NewLine);
+            }
+        }
+    }
+}
+
+2-using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WinFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string nome = textBox1.Text;
+            float n1 = float.Parse(textBox2.Text);
+            float n2 = float.Parse(textBox3.Text);
+            float media = (n1 + n2) / 2;
+            while (media < 6)
+            {
+                textBox4.AppendText(string.Format("reprovado , media = {0:G3}", media) + Environment.NewLine);
+                break;
+            }
+            while (media >= 6)
+            {
+                textBox4.AppendText(string.Format("aprovado , media = {0:G3}", media) + Environment.NewLine);
+                break;
+            }
+        }
+    }
+}
+
+3-using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WinFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string nome = textBox1.Text;
+            int preco = int.Parse(textBox2.Text);
+            int qnt = int.Parse(textBox3.Text);
+            int total = preco * qnt;
+            String s = String.Format("Valor = {0:0,0.00} ", total);
+            textBox4.AppendText(s + Environment.NewLine);
+        }
+    }
+}
+
+
+4-using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WinFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int d = int.Parse(textBox1.Text);
+            int m = int.Parse(textBox2.Text);
+            int a = int.Parse(textBox3.Text);
+
+            DateTime data = new DateTime(a, m, d);
+            textBox4.AppendText(data.ToString("dd-MM-yyyy") + Environment.NewLine);
+        }
+    }
+}

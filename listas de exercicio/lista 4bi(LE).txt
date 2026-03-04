@@ -1,0 +1,883 @@
+12.4
+a)#include<stdio.h> 
+#include<string.h> 
+#include<math.h>
+
+
+float valor , taxa , temp ;
+	
+void prestacao (float x , float y , float z ){
+
+float prest;
+prest = x + (x * (y / 100) * z);
+printf ("prestacao por valor = %f\n" , prest);
+
+}
+
+void prestacaoR (float &x , float y , float z ){
+
+x = x + (x * (y / 100) * z);
+
+
+}
+
+main () {
+
+printf("escreva o valor\n");
+scanf("%f" , &valor);
+printf("escreva a taxa\n");
+scanf("%f" , &taxa);
+printf("escreva o tempo\n");
+scanf("%f" , &temp);
+prestacao (valor , taxa , temp);
+prestacaoR (valor , taxa , temp);
+
+printf ("prestacao por referencia = %f\n" , valor);
+
+}
+
+
+b)#include<stdio.h> 
+#include<string.h> 
+#include<math.h>
+
+
+int n , soma ;
+
+void ribo( int n ){
+
+int soma;
+while ( n > 0 ) {
+      soma = soma + n ;
+      n = n - 1 ;
+}
+printf ("soma dos numeros ate o valor = %d \n" , soma) ;
+
+}
+
+void riboR ( int &soma , int n ){
+
+
+while ( n > 0 ) {
+      soma = soma + n ;
+      n = n - 1 ;
+}
+
+}
+
+main () {
+	
+printf("escreva o valor\n");
+scanf ("%d" , &n);
+ribo (n);
+riboR (soma , n);
+printf ("soma dos numeros ate o valor por referencia = %d", soma);
+
+
+}
+
+c)#include<stdio.h> 
+#include<string.h> 
+#include<math.h>
+
+
+int n , atu , ant , prox ;
+
+void fibo( int n){
+
+
+int ant , atu , prox;
+ant = 0;
+atu = 1;
+prox = 1;
+while ( atu < n ) {
+      printf ("fiibonate ate o valor = %d\n", atu);
+      ant = atu;
+      atu = prox;
+      prox = ant + atu;
+}
+
+}
+
+void fiboR ( int &ant , int &atu , int &prox){
+      ant = atu;
+      atu = prox;
+      prox = ant + atu;
+}
+
+main () {
+	
+printf("escreva o valor\n");
+scanf ("%d", &n);
+fibo (n);
+ant = 0;
+atu = 1;
+prox = 1;
+while ( atu < n ) {
+     printf ("fiibonate ate o valor por referencia = %d\n", atu);
+     fiboR (ant , atu , prox);
+}
+
+}
+
+
+d)#include<stdio.h> 
+#include<string.h> 
+#include<math.h>
+
+
+int base , expo ;
+
+void potencia ( int base , int expo ){
+
+int cont , re;
+re = 1;
+while ( cont < expo ) {
+         re = re * base;
+         cont = cont + 1;
+}
+if (expo == 0 ) {
+   re = 1;
+}
+printf (" o resultado e = %d\n" , re);
+
+}
+
+void potenciaR( int &base , int expo ){
+
+int re , cont;
+re = 1;
+cont = 0;
+while (cont < expo) {
+         re = re * base;
+         cont = cont + 1;
+}
+if (expo == 0 ) {
+   re = 1;
+}
+base = re;
+
+}
+
+main () {
+	
+printf("escreva  a base\n");
+scanf ("%d" , &base);
+printf("escreva o expoente\n");
+scanf ("%d" , &expo);
+potencia (base , expo);
+potenciaR (base , expo);
+printf (" o resultado por passagem de valor e = %d\n" , base);
+
+}
+
+e)int n ;
+
+void poi( int n ){
+
+if ( n % 2 == 0 ) {
+    printf (" e par\n");
+}else{
+    printf (" e impar\n");
+}
+
+}
+
+void poiR( int &n ){
+
+
+n = n % 2;;
+
+}
+
+main () {
+	
+printf("escreva o numero\n");
+scanf ("%d" , &n);
+poi (n);
+poiR (n);
+
+if ( n % 2 == 0 ) {
+    printf (" e par por passegem de valor\n");
+}else{
+    printf (" e impar por passegem de valor\n");
+}
+
+}
+
+f)#include<stdio.h> 
+#include<string.h> 
+#include<math.h>
+
+
+float base , base2 , base3 ;
+
+
+void potenciasoma( float base , float base2 , float base3){
+
+float re;
+re = pow(base,2) + pow(base2,2) + pow(base3,2);
+printf (" o resultado da soma e = %f\n" , re);
+
+}
+
+void potenciasomaR( float &base , float base2 , float base3 ){
+
+float re;
+re = pow(base,2) + pow(base2,2) + pow(base3,2);
+base = re;
+
+}
+
+main () {
+	
+printf("escreva  a base\n");
+scanf ("%f" , &base);
+printf("escreva  a base2\n");
+scanf ("%f" , &base2);
+printf("escreva  a base3\n");
+scanf ("%f" , &base3);
+
+potenciasoma (base , base2 , base3 );
+potenciasomaR (base , base2 , base3 );
+printf (" o resultado da soma por passagem de valor e = %f\n" , base);
+
+}
+
+
+g)#include<stdio.h> 
+#include<string.h> 
+#include<math.h>
+
+
+float base , base2 , base3 ;
+
+
+void potenciasoma( float base , float base2 , float base3){
+
+float re;
+re = base + base2 + base3;
+re = pow(re,2);
+printf (" o resultado da soma e = %f\n" , re);
+
+}
+
+void potenciasomaR( float &base , float base2 , float base3 ){
+
+float re;
+re = base + base2 + base3;
+re = pow(re,2);
+base = re;
+
+}
+
+main () {
+	
+printf("escreva  a base\n");
+scanf ("%f" , &base);
+printf("escreva  a base2\n");
+scanf ("%f" , &base2);
+printf("escreva  a base3\n");
+scanf ("%f" , &base3);
+
+potenciasoma (base , base2 , base3 );
+potenciasomaR (base , base2 , base3 );
+printf (" o resultado da soma por passagem de valor e = %f\n" , base);
+
+}
+
+h)#include<stdio.h> 
+#include<string.h> 
+#include<math.h>
+
+
+float c ;
+	
+void trans( float c ){
+
+
+float f;
+f = (9* c + 160) /5;
+printf (" o resultado em fahrenheit e = %f\n" , f);
+
+}
+
+void transR( float &c ){
+
+float f;
+f = (9* c + 160) /5;
+c = f;
+
+}
+
+main () {
+	
+printf("escreva  a temp em celsius\n");
+scanf ("%f" , &c);
+trans ( c );
+transR ( c );
+printf (" o resultado em fahrenheit por passagem de valor e = %f\n" , c);
+
+}
+
+i)#include<stdio.h> 
+#include<string.h> 
+#include<math.h>
+
+
+float dolar , cota ;
+
+void trans( float dolar , float cota ){
+
+float rel;
+rel = dolar * cota;
+printf (" o resultado em real e = %f\n" , rel);
+
+}
+
+void transR( float &dolar , float cota ){
+
+float rel; 
+rel = dolar * cota;
+dolar = rel;
+
+}
+
+main () {
+	
+printf("escreva  a cotacao\n");
+scanf ("%f" , &cota);
+printf("escreva a quantidade de dolar\n");
+scanf ("%f" , &dolar);
+trans ( dolar , cota );
+transR ( dolar , cota );
+printf (" o resultado em real por passagem de valor e = %f\n" , dolar);
+
+}
+
+j)#include<stdio.h> 
+#include<string.h> 
+#include<math.h>
+
+
+int valor ;
+
+void ver( int valor ){
+
+if (( valor % 2 == 0) && (valor % 3 == 0)) {
+    printf (" este valor e divisivel por 2 e 3 \n");
+}else{
+     printf (" o valor invalido \n");
+}
+
+}
+
+void verR( int &valor ){
+
+
+if (( valor % 2 == 0) && (valor % 3 == 0)) {
+    valor = 0;
+}else{
+     valor = 1;
+}
+
+}
+
+main () {
+	
+printf("escreva o valor\n");
+scanf("%d", &valor);
+ver ( valor );
+verR ( valor );
+
+if ( valor == 0) {
+    printf (" este valor e divisivel por 2 e 3 por referencia \n");
+}else{
+     printf (" o valor invalido por referencia \n");
+}
+
+}
+
+k)#include<stdio.h> 
+#include<string.h> 
+#include<math.h>
+
+
+int valor ;
+
+void ver( int valor ){
+
+if (( valor % 2 == 0) || (valor % 3 == 0)) {
+    printf (" este valor e divisivel por 2 ou 3 \n");
+}else{
+     printf (" o valor invalido \n");
+}
+
+}
+
+void verR( int &valor ){
+
+
+if (( valor % 2 == 0) || (valor % 3 == 0)) {
+    valor = 0;
+}else{
+     valor = 1;
+}
+
+}
+
+main () {
+	
+printf("escreva o valor\n");
+scanf("%d", &valor);
+ver ( valor );
+verR ( valor );
+
+if ( valor == 0) {
+    printf (" este valor e divisivel por 2 ou 3 por referencia \n");
+}else{
+     printf (" o valor invalido por referencia \n");
+}
+
+}
+
+L)#include<stdio.h> 
+#include<string.h> 
+#include<math.h>
+
+
+int valor ;
+
+void ver( int valor ){
+
+if (( valor % 2 == 1) && (valor % 3 == 1)) {
+    printf (" este valor nao e divisivel por 2 e 3 \n");
+}else{
+     printf (" o valor invalido \n");
+}
+
+}
+
+void verR( int &valor ){
+
+
+if (( valor % 2 == 1) && (valor % 3 == 1)) {
+    valor = 0;
+}else{
+     valor = 1;
+}
+
+}
+
+main () {
+	
+printf("escreva o valor\n");
+scanf("%d", &valor);
+ver ( valor );
+verR ( valor );
+
+if ( valor == 0) {
+    printf (" este valor nao e divisivel por 2 e 3 por referencia \n");
+}else{
+     printf (" o valor invalido por referencia \n");
+}
+
+}
+
+m)#include<stdio.h> 
+#include<string.h> 
+#include<math.h>
+
+
+float valor ;
+
+
+void ver( float valor ){
+
+if ( valor < 0) {
+    valor = valor * -1;
+    printf ("valor = %f\n" ,valor);
+}else{
+
+     printf ("valor = %f\n" ,valor);
+}
+
+}
+
+void verR ( float &valor ){
+
+if ( valor < 0) {
+    valor = valor * -1;
+}
+
+}
+
+main () {
+	
+printf("escreva o valor\n");
+scanf("%f", &valor);
+ver ( valor );
+verR ( valor );
+printf ("valor por referencia = %f\n" ,valor);
+
+}
+
+n)char nome[30] ;
+int sexo;
+float n;
+
+
+void ver( char nome , char sexo ){
+
+if ( sexo == 1 ) {
+    printf ("llma. Sra %s\n" ,nome);
+}else{
+    printf ("llmo. Sr %s\n" ,nome);
+}
+
+}
+
+void verR( float &n , char nome , char sexo ){
+
+if ( sexo == 1 ) {
+    n = 0;
+}else{
+    n = 1;
+}
+
+}
+
+main () {
+	
+printf("escreva o seu nome\n");
+scanf ("%s" , &nome);
+printf("escreva o seu sexo\n");
+scanf ("%d" , &sexo);
+
+
+
+ver ( nome[30] , sexo );
+verR ( n , nome[30] , sexo );
+if ( n == 0 ) {
+    printf ("llma . Sra por referencia %s\n" ,nome);
+}else{
+    printf ("llmo. Sr por referencia %s\n" ,nome);
+}
+
+}
+
+o)#include<stdio.h> 
+#include<string.h> 
+#include<math.h>
+
+
+float valor;
+	
+void fat( float valor ){
+
+float cont;
+cont = valor - 1;
+while ( cont > 0)  {
+    valor = valor * cont;
+    cont = cont - 1;
+}
+
+if ( valor == 0 ) {
+   valor = 1;
+}
+
+printf ("fatorial do valor = %f\n" ,valor);
+
+}
+
+void fatR( float &valor ){
+
+float cont;
+cont = valor - 1;
+while ( cont > 0)  {
+    valor = valor * cont;
+    cont = cont - 1;
+}
+
+if ( valor == 0 ) {
+   valor = 1;
+}
+
+}
+
+main () {
+	
+printf ("escreva o valor\n");
+scanf("%f", &valor);
+fat ( valor );
+fatR ( valor );
+printf ("fatorial do valor por referencia = %f\n" ,valor);
+
+
+}
+
+
+
+3.4
+funçao
+a)#include<stdio.h> 
+#include<string.h> 
+#include<math.h>
+
+
+int n , soma , aux ;
+
+int riboF ( int soma , int n ){
+
+
+while ( n > 0 ) {
+      soma = soma + n ;
+      n = n - 1 ;
+}
+return soma;
+}
+
+main () {
+	
+printf("escreva o valor\n");
+scanf ("%d" , &n);
+aux = riboF (soma , n);
+printf ("soma dos numeros ate o valor = %d", aux);
+
+
+} 	
+
+b)#include<stdio.h> 
+#include<string.h> 
+#include<math.h>
+
+
+int n , atu , ant ,  aux;
+
+int fiboF ( int ant , int atu ){
+	  int prox;
+	  prox = 1;
+      prox = ant + atu;
+      return prox;
+}
+
+main () {
+	
+printf("escreva o valor\n");
+scanf ("%d", &n);
+
+ant = 0;
+atu = 1;
+aux = 1;
+
+while ( atu < n ) {
+	
+     printf ("fiibonate ate o valor = %d\n", atu);
+     aux = fiboF (ant , atu );
+     ant = atu;
+     atu = aux;
+}
+
+}
+
+c)#include<stdio.h> 
+#include<string.h> 
+#include<math.h>
+
+
+float valor , taxa , temp  , aux;
+
+float prestacaoF (float x , float y , float z ){
+
+x = x + (x * (y / 100) * z);
+return x;
+
+}
+
+main () {
+
+printf("escreva o valor\n");
+scanf("%f" , &valor);
+printf("escreva a taxa\n");
+scanf("%f" , &taxa);
+printf("escreva o tempo\n");
+scanf("%f" , &temp);
+
+aux = prestacaoF (valor , taxa , temp);
+
+printf ("prestacao = %f\n" , aux);
+
+}
+
+d)#include<stdio.h> 
+#include<string.h> 
+#include<math.h>
+
+
+int base , expo , aux;
+
+int potenciaF ( int base , int expo ){
+
+int re , cont;
+re = 1;
+cont = 0;
+while (cont < expo) {
+         re = re * base;
+         cont = cont + 1;
+}
+if (expo == 0 ) {
+   re = 1;
+}
+return re;
+
+}
+
+main () {
+	
+printf("escreva  a base\n");
+scanf ("%d" , &base);
+printf("escreva o expoente\n");
+scanf ("%d" , &expo);
+aux = potenciaF (base , expo);
+printf (" o resultado e = %d\n" , aux);
+
+}
+
+e)#include<stdio.h> 
+#include<string.h> 
+#include<math.h>
+
+
+float base , base2 , base3 , aux;
+
+float potenciasomaF ( float base , float base2 , float base3 ){
+
+float re;
+re = pow(base,2) + pow(base2,2) + pow(base3,2);
+return re;
+
+}
+
+main () {
+	
+printf("escreva  a base\n");
+scanf ("%f" , &base);
+printf("escreva  a base2\n");
+scanf ("%f" , &base2);
+printf("escreva  a base3\n");
+scanf ("%f" , &base3);
+
+aux = potenciasomaF (base , base2 , base3 );
+printf (" o resultado da soma  e = %f\n" , aux);
+
+}
+
+f)#include<stdio.h> 
+#include<string.h> 
+#include<math.h>
+
+
+float base , base2 , base3 , aux;
+
+float potenciasomaF ( float base , float base2 , float base3 ){
+
+float re;
+re = base + base2 + base3;
+re = pow(re,2);
+return re;
+
+}
+
+main () {
+	
+printf("escreva  a base\n");
+scanf ("%f" , &base);
+printf("escreva  a base2\n");
+scanf ("%f" , &base2);
+printf("escreva  a base3\n");
+scanf ("%f" , &base3);
+
+aux = potenciasomaF (base , base2 , base3 );
+printf (" o resultado da soma  e = %f\n" , aux);
+
+}
+
+g)#include<stdio.h> 
+#include<string.h> 
+#include<math.h>
+
+
+float dolar , cota , aux;
+
+float transF( float dolar , float cota ){
+
+float rel; 
+rel = dolar * cota;
+return rel;
+
+
+}
+
+main () {
+	
+printf("escreva  a cotacao\n");
+scanf ("%f" , &cota);
+printf("escreva a quantidade de dolar\n");
+scanf ("%f" , &dolar);
+aux = transF ( dolar , cota );
+printf (" o resultado em real e = %f\n" , aux);
+
+}
+
+h)#include<stdio.h> 
+#include<string.h> 
+#include<math.h>
+
+
+float rel , cota , aux;
+
+float transF( float rel , float cota ){
+
+float dolar; 
+dolar = rel / cota;
+return dolar;
+
+
+}
+
+main () {
+	
+printf("escreva  a cotacao\n");
+scanf ("%f" , &cota);
+printf("escreva a quantidade de dolar\n");
+scanf ("%f" , &rel);
+aux = transF ( rel , cota );
+printf (" o resultado em real e = %f\n" , aux);
+
+}
+
+i)#include<stdio.h> 
+#include<string.h> 
+#include<math.h>
+
+
+float f , aux;
+	
+float transF ( float f ){
+
+float c;
+c = (f - 32.0) * (5.0/9.0);
+return c;
+
+}
+
+main () {
+	
+printf("escreva  a temp em fahrenheit\n");
+scanf ("%f" , &f);
+aux = transF ( f );
+printf (" o resultado em celsius e = %f\n" , aux);
+
+}
+
+

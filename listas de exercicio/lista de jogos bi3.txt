@@ -1,0 +1,58 @@
+1-sao um grupo de imagens de um personagens que sao mostradas em ordem para animar o personagem
+
+2-o animator e para fazer trasições entre animações e modificar essas transições e o animation e para criar a animação e modificar ela como sua velociadade
+
+3-e a mudança entre uma animaçao e outra
+
+4-entrar no animator clicar no botao direito do mouse num bloco e selecionar make transition
+
+5-os parametros sao as condiçoes de transiçoes , servem para que cada animaçao possa ser acionada quando fazer mais sentido
+
+6-do lado esquerdo da janela do animeitor tem a ferramenta de criaçao e manipulaçao de parametros click no botao de "+" para criar uma parametro e selecione seu tipo
+
+7-sao condiçoes para que uma animaçao pare de tocar e começe a tocar outra
+
+8-inicializa a variavel personagemAnimator
+
+9-elas mudao o estado das variável de animação
+
+10- um temporizador é um dispositivo capaz de medir o tempo, que pode ser usado para controlar um evento ou processo
+
+11-ele conta o tempo entre frames
+
+12-ele verifica se o bonus for ativado e depois se o tempo do bonus e maoir ou igual que 0 dai ele subitrai o tempo total por o tempo entre frames 
+e se o tempo do bonus for menor que zero cai no else e desativa o bonus e retorna o tempo e a velociade para como era inicialmente
+
+13-deixar o o codigo menor e mais simples , chamando outro metado do script em determinado tempo atraveis de seu nome e deve ser passado como uma string
+
+14- o "metado" sera chamdo depois do 2
+
+15-o input
+
+16-ele pega o input dos botoes do mouse e os indentifica por numeros , botao esquerdo = 0 , botao direito = 1 , botao do meio = 2 
+
+17-ele pega o input de uma tecla atraveis de um keycode
+
+18-um keycode e a indentificaçao de uma tecla
+
+19-keycode e o nome da tecla para o computador e getkeydown e para saber se ela foi precionada
+
+20- e um componente fixo de cada gameobject e possui a propiedade: postion
+
+21-pega a posiçao do objeto com a tag portal02
+
+22-teleporta o personagem para o portal oposto e os joga um pouco para frente para nao se prenderem nos portais
+
+23-achar um objeto com a mesma tag e pode com isso se aplicar algo a ele
+
+24-ele pega a tag do objecto tocado pelo personagem e se a tag for tagA cria um vetor e armagena eles no vetor com diferentes numeros e depois coloca quantos tinha em outra variavel
+e cria o Rigibody das bolas e recupera o Rigibody delas e muda sua escala de gravida para 0.2
+
+25-FindGameObjects e para mais de um object e FindGameObject e para um so
+
+26-pega a velocidade do inimigo nos eixo x e coloca em Vx e seta o valor de Vy para 0 e se Vx for 0 Vx recebe o valor da multiplicaçao de
+VelociadeAndar e DirecaoHorizontal e o muda o vetor de moviemento pra o vetor de Vx e Vy e a velocidade do inimigo veria o valor de movimento e DirecaoHorizontal é multiplicado por -1
+
+27-a diferencia é que o filho do objecto tocado é o obejeto dentro de outro objecto e esse objecto é o objecto tocado
+
+28-

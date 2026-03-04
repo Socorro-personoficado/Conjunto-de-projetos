@@ -1,0 +1,393 @@
+1-import hashlib
+texto = input("digite a senha: ")
+sha_signature = hashlib.sha256(texto.encode()).hexdigest()
+print(f"texto original: {texto}")
+print(f"hash SHA-256: {sha_signature}")
+
+2-import hashlib
+texto = input("digite a senha: ")
+sha_signature = hashlib.sha256(texto.encode()).hexdigest()
+texto2 = input("digite a senha: ")
+sha_signature2 = hashlib.sha256(texto2.encode()).hexdigest()
+if(sha_signature == sha_signature2):
+    print("SAO IGUAIS")
+    print(f"texto original: {texto}")
+    print(f"hash SHA-256: {sha_signature}")
+    print(f"texto original: {texto2}")
+    print(f"hash SHA-256: {sha_signature2}")
+else:
+    print("SAO NAO IGUAIS")
+    print(f"texto original: {texto}")
+    print(f"hash SHA-256: {sha_signature}")
+    print(f"texto original: {texto2}")
+    print(f"hash SHA-256: {sha_signature2}")
+
+3-import hashlib
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+
+uri = "mongodb+srv://root:123@cluster0.e0lpaec.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+client = MongoClient(uri , server_api=ServerApi('1'))
+banco = client['socorro']
+hashs = banco['hashs']
+
+texto = input("digite a senha: ")
+sha_signature = hashlib.sha256(texto.encode()).hexdigest()
+
+hashs.insert_one(
+    {
+
+    "hash": sha_signature
+
+    }
+)
+
+4-import hashlib
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+
+uri = "mongodb+srv://root:123@cluster0.e0lpaec.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+client = MongoClient(uri , server_api=ServerApi('1'))
+banco = client['socorro']
+hashs = banco['hashs']
+
+texto = input("digite a senha: ")
+sha_signature = hashlib.sha256(texto.encode()).hexdigest()
+
+id = input("digite o ID: ")
+
+
+
+resu = hashs.find_one(
+    {
+
+    "id": id
+
+    }
+)
+
+
+if(sha_signature == resu['hash']):
+    print("SAO IGUAIS")
+    print(f"texto original: {texto}")
+    print(f"hash SHA-256: {sha_signature}")
+    print(f"hash SHA-256: {resu['hash']}")
+else:
+    print("SAO NAO IGUAIS")
+    print(f"texto original: {texto}")
+    print(f"hash SHA-256: {sha_signature}")
+    print(f"hash SHA-256: {resu['hash']}")
+
+5-import hashlib
+def criptografar_md5(texto):
+    hash_md5 = hashlib.md5()
+    hash_md5.update(texto.encode('utf-8'))
+    return hash_md5.hexdigest()
+
+texto = "Aprenda a Criptografar com MD5 em Python"
+hash_md5 = criptografar_md5(texto)
+print("Hash MD5:", hash_md5)
+
+
+
+
+6-import hashlib
+def criptografar_md5(texto):
+    hash_md5 = hashlib.md5()
+    hash_md5.update(texto.encode('utf-8'))
+    return hash_md5.hexdigest()
+#///////////////MD5///////////////////
+texto = "Aprenda a Criptografar com MD5 em Python"
+hash_md5 = criptografar_md5(texto)
+print("Hash MD5:", hash_md5)
+#/////////////sha-256////////////////
+texto = input("digite a senha: ")
+sha_signature = hashlib.sha256(texto.encode()).hexdigest()
+print(f"texto original: {texto}")
+print(f"hash SHA-256: {sha_signature}")
+#/////////////sha-1////////////////
+hash_object = hashlib.sha1(b'HelWorld')
+pbHash = hash_object.hexdigest()
+length = len(pbHash.decode("hex"))
+print (length)
+if(sha_signature == hash_md5 and hash_md5 == pbHash):
+    print("SAO IGUAIS")
+    print(f"texto original: {texto}")
+    print(f"hash SHA-256: {sha_signature}")
+    print(f"hash MD5: {hash_md5}")
+    print(f"hash sha-1: {pbHash}")
+else:
+    print("SAO NAO IGUAIS")
+    print(f"texto original: {texto}")
+    print(f"hash SHA-256: {sha_signature}")
+    print(f"hash MD5: {hash_md5}")
+    print(f"hash sha-1: {pbHash}")
+
+7-from cryptography.fernet import Fernet
+
+#gerendo chave secrata
+chave = Fernet.generate_key()
+fernet = Fernet(chave)
+mensagem = input("mensagem: ")
+mensagem_crip = fernet.encrypt(mensagem.encode())
+print(mensagem_crip)
+
+8-from cryptography.fernet import Fernet
+
+#gerendo chave secrata
+chave = Fernet.generate_key()
+fernet = Fernet(chave)
+mensagem = input("mensagem: ")
+mensagem_crip = fernet.encrypt(mensagem.encode())
+print(mensagem_crip)
+mensagem_decrip = fernet.decrypt(mensagem_crip.decode())
+print(mensagem_decrip)
+
+9-from cryptography.fernet import Fernet
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+
+uri = "mongodb+srv://root:123@cluster0.e0lpaec.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+client = MongoClient(uri , server_api=ServerApi('1'))
+banco = client['socorro']
+hashs = banco['hashs']
+
+#gerendo chave secrata
+chave = Fernet.generate_key()
+fernet = Fernet(chave)
+mensagem = input("mensagem: ")
+mensagem_crip = fernet.encrypt(mensagem.encode())
+print(mensagem_crip)
+mensagem_decrip = fernet.decrypt(mensagem_crip.decode())
+print(mensagem_decrip)
+
+hashs.insert_one(
+    {
+
+    "hash": mensagem_crip
+
+    }
+)
+
+10-from cryptography.fernet import Fernet
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+
+uri = "mongodb+srv://root:123@cluster0.e0lpaec.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+client = MongoClient(uri , server_api=ServerApi('1'))
+banco = client['socorro']
+hashs = banco['hashs']
+
+#gerendo chave secrata
+chave = Fernet.generate_key()
+fernet = Fernet(chave)
+id_mensagem = input("id da mensagem: ")
+
+resu = hashs.find_one(
+    {
+
+    "id": id
+
+    }
+)
+
+mensagem_decrip = fernet.decrypt(resu.decode())
+print(mensagem_decrip)
+
+11-from cryptography.fernet import Fernet
+#gerendo chave secrata
+chave = Fernet.generate_key()
+fernet = Fernet(chave)
+
+12-from cryptography.fernet import Fernet
+from main import fernet
+mensagem = input("mensagem: ")
+mensagem_crip = fernet.encrypt(mensagem.encode())
+print(mensagem_crip)
+
+13-from cryptography.fernet import Fernet
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+
+uri = "mongodb+srv://root:123@cluster0.e0lpaec.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+client = MongoClient(uri , server_api=ServerApi('1'))
+banco = client['socorro']
+hashs = banco['hashs']
+
+#gerendo chave secrata
+chave = Fernet.generate_key()
+fernet = Fernet(chave)
+
+hashs.insert_one(
+    {
+
+    "chave fernet": fernet
+
+    }
+)
+
+14-from cryptography.fernet import Fernet
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+
+uri = "mongodb+srv://root:123@cluster0.e0lpaec.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+client = MongoClient(uri , server_api=ServerApi('1'))
+banco = client['socorro']
+hashs = banco['hashs']
+
+#gerendo chave secrata
+id_chave = input("id da chave: ")
+resu = hashs.find_one(
+    {
+
+    "id": id_chave
+
+    }
+)
+
+mensagem = input("mensagem: ")
+fernet = Fernet(resu)
+mensagem_crip = fernet.encrypt(mensagem.encode())
+print(mensagem_crip)
+
+15-from cryptography.fernet import Fernet
+
+#gerendo chave secrata
+chave = Fernet.generate_key()
+fernet = Fernet(chave)
+mensagem = input("mensagem: ")
+mensagem_crip = fernet.encrypt(mensagem.encode())
+print(mensagem_crip)
+
+arquivo = open('teste.txt', 'w')
+arquivo.write(f'{mensagem_crip}')
+arquivo.close()
+
+arquivo = open('teste.txt', 'r')
+mensagem_decrip1 = arquivo.read()
+arquivo.close()
+
+print(mensagem_decrip1)
+
+mensagem_decrip2 = fernet.decrypt(mensagem_decrip1.decode())
+print(mensagem_decrip2)
+
+16-import hashlib
+def criptografar_md5(texto):
+    hash_md5 = hashlib.md5()
+    hash_md5.update(texto.encode('utf-8'))
+    return hash_md5.hexdigest()
+#///////////////MD5///////////////////
+texto = "Aprenda a Criptografar com MD5 em Python"
+hash_md5 = criptografar_md5(texto)
+print("Hash MD5:", hash_md5)
+#/////////////sha-256////////////////
+texto = input("digite a senha: ")
+sha_signature = hashlib.sha256(texto.encode()).hexdigest()
+print(f"texto original: {texto}")
+
+#/////////////sha-1////////////////
+hash_object = hashlib.sha1(b'HelWorld')
+pbHash = hash_object.hexdigest()
+
+print(f"hash SHA-256: {len(sha_signature)}")
+print(f"hash MD5: {len(hash_md5)}")
+print(f"hash sha-1: {len(pbHash)}")
+
+17-import hashlib
+texto = input("digite a senha: ")
+sha_signature = hashlib.sha256(texto.encode()).hexdigest()
+print(f"texto original: {texto}")
+print(f"hash SHA-256: {sha_signature}")
+
+18-from cryptography.fernet import Fernet
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+
+uri = "mongodb+srv://root:123@cluster0.e0lpaec.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+client = MongoClient(uri , server_api=ServerApi('1'))
+banco = client['socorro']
+hashs = banco['hashs']
+
+#gerendo chave secrata
+chave = Fernet.generate_key()
+fernet = Fernet(chave)
+mensagem = input("mensagem: ")
+mensagem_crip = fernet.encrypt(mensagem.encode())
+print(mensagem_crip)
+mensagem_decrip = fernet.decrypt(mensagem_crip.decode())
+print(mensagem_decrip)
+
+hashs.insert_one(
+    {
+
+    "hash": mensagem_crip
+
+    }
+)
+
+id_mensagem = input("id da mensagem: ")
+
+resu = hashs.find_one(
+    {
+
+    "id": id
+
+    }
+)
+if resu == mensagem_crip:
+    print('valores iguais')
+
+19-from cryptography.fernet import Fernet
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+
+uri = "mongodb+srv://root:123@cluster0.e0lpaec.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+client = MongoClient(uri , server_api=ServerApi('1'))
+banco = client['socorro']
+hashs = banco['hashs']
+
+#gerendo chave secrata
+chave = Fernet.generate_key()
+fernet = Fernet(chave)
+mensagem_crip = []
+mensagem = input("mensagem: ")
+mensagem_crip.append(fernet.encrypt(mensagem.encode()))
+mensagem2 = input("mensagem2: ")
+mensagem_crip.append(fernet.encrypt(mensagem2.encode()))
+print(mensagem_crip)
+
+for x in range (0,len(mensagem_crip)):
+    hashs.insert_one(
+        {
+
+        "hash": mensagem_crip[x]
+
+        }
+    )
+
+20-from cryptography.fernet import Fernet
+
+#gerendo chave secrata
+chave = Fernet.generate_key()
+fernet = Fernet(chave)
+mensagem = input("mensagem: ")
+mensagem_crip = fernet.encrypt(mensagem.encode())
+print(mensagem_crip)
+
+arquivo = open('teste.txt', 'w')
+arquivo.write(f'{mensagem_crip}')
+arquivo.close()
+
+arquivo = open('teste.txt', 'a')
+arquivo.write(f'sting nao funciona no decode pq?')
+arquivo.close()
+
+arquivo = open('teste.txt', 'r')
+mensagem_decrip1 = arquivo.read()
+arquivo.close()
+
+mensagem_crip2 = fernet.encrypt(mensagem_decrip1.encode())
+
+if mensagem_crip == mensagem_crip2:
+    print("hashs iguais")

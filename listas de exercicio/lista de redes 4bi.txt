@@ -1,0 +1,53 @@
+tem tres listas -_-
+nao estudar so por isso ler apostila tambem
+lista 1
+
+1-fisica
+enlace
+rede
+transporte
+sessao
+apresentacao
+aplicaçao
+
+2-fisica = fornecer as características mecânicas, elétricas, funcionais e de procedimentos para manter conexões físicas 
+para a transmissão de bits entre os sistemas ou equipamentos
+
+enlace = detectar e opcionalmente corrigir erros de transmissão da camada física assim convertendo um canal de 
+transmissão não confiável em um canal confiável para uso pela camada de rede
+
+rede = fornecer à camada de transporte um meio para transferir pacotes pelos pontos da rede até o seu destino
+
+transporte = responsável pela transferência fim a fim de dados entre processos de uma máquina de origem e processos 
+de uma máquina de destino e sem preocupar-se com a forma que os pacotes de dados viajam na camada de rede e inferiores
+
+sessao = a camada de sessão possui mecanismos que permitem estruturar os circuitos oferecidos pela camada de transporte 
+as principais funções da camada de sessão são: Gerenciamento de token, controle de diálogo e gerenciamento de atividades
+
+apresentacao = converter as informações que são recebidas da camada de aplicação para um formato “entendível” na 
+transmissão desses dados
+
+aplicaçao = cuida da comunicação entre as aplicações, sendo que cada aplicação possui protocolos específicos de 
+comunicação
+
+3-Simplex = fluxo unico da origem para o destino
+Half Duplex = pode ir e vir mas nao ao memso tempo
+full duplex = fluxo simultanio
+
+4-interface de rede
+internet
+transporte
+aplicaçao
+
+5-OSI: camada fisica , porque sem ela os outros nao tem uso
+TCP/IP: camada interface de rede , porque sem ela o despositivo nao esta conectado
+
+6-A
+
+7-D
+
+8-C
+
+9-C
+
+10-D

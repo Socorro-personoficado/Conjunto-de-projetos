@@ -1,0 +1,1458 @@
+vetor
+a)Algoritmo "semnome"
+Var
+a : vetor[1..10] de real
+x :inteiro
+
+Inicio
+enquanto (x < 10 ) faca
+         x <- x + 1
+         escreval("digite o " , x ,"° numero")
+         leia(a[x])
+fimenquanto
+x <- 0
+enquanto (x < 10 ) faca
+         x <- x + 1
+         escreval("o" , x ,"° numero que voce digitou foi")
+         escreval(a[x])
+fimenquanto
+
+
+Fimalgoritmo
+
+b)Algoritmo "semnome"
+Var
+a : vetor[1..8] de real
+b : vetor[1..8] de real
+x :inteiro
+
+Inicio
+enquanto (x < 8 ) faca
+         x <- x + 1
+         escreval("digite o " , x ,"° numero")
+         leia(a[x])
+fimenquanto
+x <- 0
+enquanto (x < 8 ) faca
+         x <- x + 1
+         b[x] <- a[x] * 3
+         escreval("o" , x ,"° numero que voce digitou veses 3 ")
+         escreval(b[x])
+fimenquanto
+
+
+Fimalgoritmo
+
+c)Algoritmo "semnome"
+Var
+a : vetor[1..20] de inteiro
+b : vetor[1..20] de inteiro
+c : vetor[1..20] de inteiro
+x :inteiro
+
+Inicio
+enquanto (x < 20 ) faca
+         x <- x + 1
+         escreval("digite o " , x ,"° numero")
+         leia(a[x])
+fimenquanto
+x <- 0
+enquanto (x < 20 ) faca
+         x <- x + 1
+         escreval(a[x] ," -  esse numero")
+         leia(b[x])
+fimenquanto
+x <- 0
+enquanto (x < 20 ) faca
+         x <- x + 1
+         c[x] <- a[x] - b[x]
+         escreval(a[x] , " -" , b[x] ,"= ", c[x])
+
+fimenquanto
+
+Fimalgoritmo
+
+d)Algoritmo "semnome"
+Var
+a : vetor[1..15] de real
+b : vetor[1..15] de real
+x :inteiro
+
+Inicio
+enquanto (x < 15 ) faca
+         x <- x + 1
+         escreval("digite o " , x ,"° numero")
+         leia(a[x])
+fimenquanto
+x <- 0
+enquanto (x < 15 ) faca
+         x <- x + 1
+         b[x] <- a[x] ^ 2
+         escreval(a[x] , " ao quadrado = " , b[x])
+fimenquanto
+
+Fimalgoritmo
+
+e)Algoritmo "semnome"
+Var
+a : vetor[1..15] de inteiro
+b : vetor[1..15] de inteiro
+
+cont ,x,fat:inteiro
+
+Inicio
+
+para cont de 1 ate 15 faca
+     fat<- 1
+     escreval ("digite ",cont,"º numeros")
+     leia (a[cont])
+     para x de 1 ate a[cont] faca
+      fat<- fat*x
+     fimpara
+     b[cont]<- fat
+fimpara
+para cont de 1 ate 15 faca
+     escreval ("fatorial dos numeros que voce digitou = ", b[cont])
+fimpara
+
+Fimalgoritmo
+
+f)Algoritmo "semnome"
+Var
+a : vetor[1..15] de inteiro
+b : vetor[1..15] de inteiro
+c : vetor[1..30] de inteiro
+cont , x:inteiro
+
+Inicio
+x <- 1
+para cont de 1 ate 15 faca
+     escreval ("digite uns numeros")
+     leia (a[cont])
+     c[x]<- a[cont]
+     x <- x + 1
+fimpara
+para cont de 1 ate 15 faca
+     escreval ("digite outros numeros")
+     leia (b[cont])
+     c[x]<- b[cont]
+     x <- x + 1
+fimpara
+para x de 1 ate 30 faca
+     escreval ("", c[x])
+fimpara
+     
+Fimalgoritmo
+
+g)Algoritmo "semnome"
+Var
+a : vetor[1..20] de inteiro
+b : vetor[1..30] de inteiro
+c : vetor[1..50] de inteiro
+cont , x:inteiro
+
+Inicio
+x <- 1
+para cont de 1 ate 20 faca
+     escreval ("digite uns numeros")
+     leia (a[cont])
+     c[x]<- a[cont]
+     x <- x + 1
+fimpara
+para cont de 1 ate 30 faca
+     escreval ("digite outros numeros")
+     leia (b[cont])
+     c[x]<- b[cont]
+     x <- x + 1
+fimpara
+para x de 1 ate 50 faca
+     escreval ("", c[x])
+fimpara
+     
+Fimalgoritmo
+
+H)Algoritmo "semnome"
+Var
+a : vetor[1..20] de inteiro
+b : vetor[1..20] de inteiro
+cont , x , y:inteiro
+
+Inicio
+x <- 1
+y <- 20
+para cont de 1 ate 20 faca
+     escreval ("digite uns numeros")
+     leia (a[cont])
+     b[y] <- a[cont]
+     y <- y-1
+fimpara
+y <- 1
+para cont de 1 ate 20 faca
+     escreval ("matriz A = ", a[cont]," , matriz  B=",b[y] )
+     y <- y+1
+
+fimpara
+     
+Fimalgoritmo
+
+i)Algoritmo "semnome"
+Var
+a : vetor[1..5] de inteiro
+b : vetor[1..5] de inteiro
+c : vetor[1..5] de inteiro
+d : vetor[1..15] de inteiro
+cont , x:inteiro
+
+Inicio
+x <- 1
+
+para cont de 1 ate 5 faca
+     escreval ("digite uns numeros")
+     leia (a[cont])
+     d[x] <- a[cont]
+     x <- x + 1
+fimpara
+
+para cont de 1 ate 5 faca
+     escreval ("digite uns numeros")
+     leia (b[cont])
+     d[x] <- b[cont]
+     x <- x + 1
+fimpara
+
+para cont de 1 ate 5 faca
+     escreval ("digite uns numeros")
+     leia (c[cont])
+     d[x] <- c[cont]
+     x <- x + 1
+fimpara
+
+para x de 1 ate 15 faca
+     escreval ("matriz D = " , d[x])
+fimpara
+Fimalgoritmo
+
+j)Algoritmo "semnome"
+Var
+a : vetor[1..20] de inteiro
+b : vetor[1..20] de inteiro
+cont , soma , soma2 , soma3 , x , y , c:inteiro
+
+Inicio
+x <- 1
+
+para cont de 1 ate 20 faca
+     soma <- 0
+     soma2 <- 0
+     soma3 <- 0
+     c <- 0
+     escreval ("digite uns numeros")
+     leia (a[cont])
+     para y de 1 ate a[cont] faca
+          c <- c + 1
+          soma <- (a[cont] - c)
+          soma2 <- soma2 + soma
+          soma3 <- a[cont] + soma2
+     fimpara
+
+     b[x] <- soma3
+     x <- x + 1
+fimpara
+
+para x de 1 ate 20 faca
+     escreval ("matriz B = " , b[x] )
+fimpara
+
+Fimalgoritmo
+
+k)Algoritmo "semnome"
+Var
+a : vetor[1..10] de inteiro
+b : vetor[1..10] de inteiro
+cont , x , y , c:inteiro
+
+Inicio
+x <- 1
+
+para cont de 1 ate 10 faca
+     escreval ("digite uns numeros positivos")
+     leia (a[cont])
+     enquanto (a[cont]<0)  faca
+              escreval ("digite novamente e positivo!!!")
+              leia (a[cont])
+     fimenquanto
+     b[cont] <- a[cont] * -1
+fimpara
+
+para x de 1 ate 10 faca
+     escreval ("matriz B = " , b[x] )
+fimpara
+
+Fimalgoritmo
+
+L)
+Algoritmo "semnome"
+Var
+a : vetor[1..10] de inteiro
+b : vetor[1..10] de real
+cont , x , y , c:inteiro
+
+Inicio
+x <- 1
+
+para cont de 1 ate 10 faca
+     escreval ("digite uns numeros ")
+     leia (a[cont])
+     b[cont] <- a[cont] /2
+fimpara
+
+para x de 1 ate 10 faca
+     escreval ("matriz A=",a[x],"matriz B = " , b[x] )
+fimpara
+
+Fimalgoritmo
+
+m)Algoritmo "semnome"
+Var
+a : vetor[1..10] de inteiro
+cont , x ,n, y , c:inteiro
+
+Inicio
+escreval ("digite uns numeros ")
+leia (n)
+para cont de 1 ate 10 faca
+     a[cont] <- n*cont
+fimpara
+
+para x de 1 ate 10 faca
+     escreval ("tabauada=",a[x])
+fimpara
+
+Fimalgoritmo
+
+n)Algoritmo "semnome"
+Var
+a:vetor[1..20]de real
+cont ,x: inteiro
+maior , menor , media , soma : real
+
+Inicio
+
+para x de 1 ate 20 passo 1 faca
+     cont<- cont+1
+     escreval ("digite algumas temperaturas em Cº")
+     leia (a[cont])
+     se (a[cont] > maior) entao
+        maior <- a[cont]
+     senao
+          se (a[cont] < menor) entao
+             menor <- a[cont]
+          fimse
+     fimse
+     soma<- a[cont]+soma
+fimpara
+media<- soma/20
+escreval ("media das temperaturas = " , media)
+escreval ("a maior das temperaturas = " , maior)
+escreval ("a menor das temperaturas = " , menor)
+
+Fimalgoritmo
+
+o)
+Algoritmo "semnome"
+Var
+a:vetor[1..20]de real
+b:vetor[1..20]de real
+cont ,x: inteiro
+
+Inicio
+para x de 1 ate 20 passo 1 faca
+     cont<- cont+1
+     escreval ("digite algumas temperaturas em Cº")
+     leia (a[cont])
+     b[cont] <- (9* a[cont] + 160) /5
+fimpara
+para x de 1 ate 20 faca
+     escreval ("temepraturs em Celsius=",a[x])
+     escreval ("temepraturs em Fahrenheit =",b[x])
+fimpara
+Fimalgoritmo
+
+p)Algoritmo "semnome"
+Var
+a:vetor[1..12]de inteiro
+b:vetor[1..12]de inteiro
+cont ,x: inteiro
+
+Inicio
+para x de 1 ate 12 passo 1 faca
+     cont<- cont+1
+     escreval ("digite alguns numeros ")
+     leia (a[cont])
+     se (a[cont]%2=1)entao
+        b[cont] <- a[cont] *2
+     senao
+       b[cont] <- a[cont]
+       fimse
+     
+fimpara
+para x de 1 ate 12 faca
+     escreval ("matriz de b =",b[x])
+fimpara
+Fimalgoritmo
+
+q)Algoritmo "semnome"
+Var
+a:vetor[1..15]de real
+b:vetor[1..15]de real
+cont ,x,casa: inteiro
+
+Inicio
+para x de 1 ate 15 passo 1 faca
+     cont<- cont+1
+     casa<- casa+1
+     escreval ("digite alguns numeros ")
+     leia (a[cont])
+     se (casa%2=0)entao
+        b[cont] <- a[cont] /2
+     senao
+       b[cont] <- a[cont] *1.5
+     fimse
+     
+fimpara
+para x de 1 ate 15 faca
+     escreval ("matriz de b =",b[x])
+fimpara
+Fimalgoritmo
+
+r)Algoritmo "semnome"
+Var
+a:vetor[1..6]de inteiro
+b:vetor[1..6]de inteiro
+c:vetor[1..6]de inteiro
+d:vetor[1..6]de inteiro
+x,y,p,pp: inteiro
+
+Inicio
+
+para x de 1 ate 6 passo 1 faca
+     escreval ("digite alguns numeros do vetor A ")
+     leia (a[x])
+fimpara
+
+para x de 1 ate 6 passo 1 faca
+     escreval ("digite alguns numeros do vetor B ")
+     leia (b[x])
+fimpara
+
+p <- 1
+pp<-1
+para x de 1 ate 6 passo 1 faca
+     se (x % 2=1) entao
+        c[p] <- a[x]
+        p<-p+1
+     senao
+           d[pp] <- a[x]
+           pp<-pp+1
+     fimse
+fimpara
+
+para x de 1 ate 6 passo 1 faca
+     se (x % 2=1) entao
+        c[p] <- b[x]
+        p<-p+1
+     senao
+           d[pp] <- b[x]
+           pp<-pp+1
+     fimse
+fimpara
+
+para y de 1 ate 6 faca
+     escreval ("vetor contendo valores de posicoes impares ", c[y])
+fimpara
+
+para y de 1 ate 6 faca
+     escreval ("vetor contendo valores de posicoes pares ", d[y])
+fimpara
+
+Fimalgoritmo
+
+s)Algoritmo "semnome"
+Var
+a:vetor[1..6]de inteiro
+b:vetor[1..6]de inteiro
+c:vetor[1..12]de inteiro
+x,y: inteiro
+
+Inicio
+y<-6
+para x de 1 ate 6 passo 1 faca
+     escreval ("digite " , x ,"º numero par vetor A ")
+     leia (a[x])
+      enquanto ( a[x] % 2=1)faca
+         escreval ("digite novamente ",x,"º numero par vetor A ")
+         leia (a[x])
+     fimenquanto
+     c[x]<- a[x]
+fimpara
+
+para x de 1 ate 6 passo 1 faca
+     y<-y+1
+     escreval ("digite ",x,"º numero impar vetor B ")
+     leia (b[x])
+     enquanto ( b[x] % 2=0)faca
+         escreval ("digite novamente ",x,"º numero impar vetor B ")
+         leia (b[x])
+     fimenquanto
+     c[y]<- b[x]
+fimpara
+
+para x de 1 ate 12 faca
+     escreval ("vetor contendo valores dos vetores de A e B ", c[x])
+fimpara
+
+Fimalgoritmo
+
+
+t)Algoritmo "semnome"
+
+Var
+a:vetor[1..10] de inteiro
+b:vetor[1..10] de inteiro
+c:vetor[1..20] de inteiro
+
+x ,y:inteiro
+
+Inicio
+para x de 1 ate 10 faca
+     repita
+           escreval("digite  o",x,"º numero apenas divisivel por 3 e 2 do vetor A")
+            leia (a[x])
+     ate ((a[x]%2=0) e (a[x]%3=0))
+     c[x]<-a[x]
+fimpara
+y<-10
+para x de 1 ate 10 faca
+     repita
+       escreval("digite  o",x,"º numero apenas multiplo de 5 do veotr B ")
+       leia (b[x])
+    ate (b[x]%5=0 )
+      y<- y+1
+      c[y]<-b[x]
+fimpara
+para x de 1 ate 20 faca
+     escreval (" o vetor de C=", c[x])
+fimpara
+
+Fimalgoritmo
+
+u)
+Algoritmo "semnome"
+
+Var
+a:vetor[1..12] de inteiro
+b:vetor[1..12] de inteiro
+c:vetor[1..24] de inteiro
+
+x ,y:inteiro
+
+Inicio
+para x de 1 ate 12 faca
+     repita
+           escreval("digite  o",x,"º numero apenas divisivel por 3 e 2 do vetor A")
+            leia (a[x])
+     ate ((a[x]%2=0) e (a[x]%3=0))
+     c[x]<-a[x]
+fimpara
+y<-12
+para x de 1 ate 12 faca
+     repita
+       escreval("digite  o",x,"º numero que nao sejam multiplo de 5 do veotr B ")
+       leia (b[x])
+    ate (b[x]%5<>0 )
+      y<- y+1
+      c[y]<-b[x]
+fimpara
+para x de 1 ate 24 faca
+     escreval (" o vetor de C=", c[x])
+fimpara
+
+Fimalgoritmo
+
+v)
+Algoritmo "semnome"
+
+Var
+a:vetor[1..30] de inteiro
+
+x ,qnt_par,qnt_impar:inteiro
+
+Inicio
+para x de 1 ate 30 faca
+     escreval ("digite o ",x,"º numero do vetor A")
+     leia (a[x])
+     se (a[x] % 2=0)entao
+        qnt_par<-qnt_par+1
+     senao
+       qnt_impar<-qnt_impar +1
+     fimse
+fimpara
+escreval ("a quantidade de pares",qnt_par)
+escreval ("a quantidade de impar",qnt_impar)
+
+Fimalgoritmo
+
+w)
+Algoritmo "semnome"
+
+Var
+a:vetor[1..10] de inteiro
+b:vetor[1..10] de inteiro
+c:vetor[1..10] de real
+x :inteiro
+
+Inicio
+para x de 1 ate 10 faca
+     escreval ("digite o ",x,"º numero do vetor A")
+     leia (a[x])
+fimpara
+
+para x de 1 ate 10 faca
+     escreval ("digite o ",x,"º numero do vetor B")
+     leia (b[x])
+fimpara
+
+para x de 1 ate 10 faca
+    c[x]<- (a[x]+b[x])^2
+fimpara
+
+para x de 1 ate 10 faca
+     escreval ("vetor de C",c[x])
+fimpara
+Fimalgoritmo
+
+x)
+Algoritmo "semnome"
+
+Var
+a:vetor[1..6] de inteiro
+b:vetor[1..6] de inteiro
+x :inteiro
+
+Inicio
+para x de 1 ate 6 faca
+     escreval ("digite o ",x,"º numero do vetor A")
+     leia (a[x])
+     se (x%2=1)entao
+        se (a[x]% 2=0)entao
+        b[x]<- a[x]
+        fimse
+     fimse
+      se (x%2=0)entao
+        se (a[x]% 2=1)entao
+        b[x]<- a[x]
+        fimse
+     fimse
+fimpara
+
+para x de 1 ate 6 faca
+     escreval ("vetor de B",b[x])
+fimpara
+
+y)
+Algoritmo "semnome"
+
+Var
+a:vetor[1..15] de inteiro
+x,qnt_par :inteiro
+
+Inicio
+para x de 1 ate 15 faca
+     escreval ("digite o ",x,"º numero do vetor A")
+     leia (a[x])
+     se (a[x]%2=0)entao
+        qnt_par<-qnt_par+1
+        fimse
+
+fimpara
+escreval ("quantidade de pares no vetor A=",qnt_par)
+Fimalgoritmo
+
+z)
+Algoritmo "semnome"
+
+Var
+a:vetor[1..10] de inteiro
+x,qnt_impar,qnt :inteiro
+porc_imp:real
+
+Inicio
+para x de 1 ate 10 faca
+     escreval ("digite o ",x,"º numero do vetor A")
+     leia (a[x])
+     qnt<- qnt+1
+     se (a[x]%2=1)entao
+        qnt_impar<-qnt_impar+1
+        fimse
+fimpara
+porc_imp<- qnt_impar/qnt
+porc_imp<-porc_imp*100
+escreval ("quantidade de impares no vetor A=",qnt_impar)
+escreval ("percentual do total de valores no vetor A que sao impares=  ",porc_imp,"%")
+Fimalgoritmo
+
+MATRIZ
+
+a)Algoritmo "semnome"
+Var
+a : vetor[1..5,1..3] de inteiro
+b : vetor[1..5,1..3] de inteiro
+c : vetor[1..5,1..3] de inteiro
+
+x,y :inteiro
+
+Inicio
+
+para x de 1 ate 5 faca
+     para y de 1 ate 3 faca
+      escreval ("digite o elemento da linha ",x," coluna ",y,"da matriz A")
+      leia (a[x,y])
+      fimpara
+fimpara
+para x de 1 ate 5 faca
+     para y de 1 ate 3 faca
+      escreval ("digite o elemento da linha ",x," coluna ",y,"da matriz B")
+      leia (b[x,y])
+     fimpara
+     
+fimpara
+
+para x de 1 ate 5  faca
+     para y de 1 ate 3 faca
+          c[x,y]<- a[x,y]+b[x,y]
+          escreval ("soma dos elementos= ", c[x,y])
+     fimpara
+fimpara
+
+Fimalgoritmo
+
+b)Algoritmo "semnome"
+Var
+a : vetor[1..7] de inteiro
+b : vetor[1..7] de inteiro
+c : vetor[1..2,1..7] de inteiro
+
+x,y :inteiro
+
+Inicio
+x<-1
+para y de 1 ate 7 faca
+      escreval ("digite o elemento ",y," do vetor A")
+      leia (a[y])
+      c[x,y]<- a[y]
+fimpara
+x<-2
+para y de 1 ate 7 faca
+     escreval ("digite o elemento ",y," do vetor B")
+     leia (b[y])
+     c[x,y]<- b[y]
+fimpara
+
+para x de 1 ate 2  faca
+     para y de 1 ate 7 faca
+           escreval ("o elemento da matriz C da linha ",x," coluna ",y," = ", c[x,y])
+     fimpara
+fimpara
+
+Fimalgoritmo
+
+c)Algoritmo "semnome"
+Var
+a : vetor[1..4,1..5] de inteiro
+
+x,y :inteiro
+
+Inicio
+
+para x de 1 ate 4  faca
+     para y de 1 ate 5 faca
+           escreval (" digite o elemento da matriz A da linha ",x," coluna ",y)
+           leia (a[x , y])
+     fimpara
+fimpara
+
+para x de 1 ate 4  faca
+     para y de 1 ate 5 faca
+           escreval ("o elemento da matriz A da linha ",x," coluna ",y," = ", a[x,y])
+     fimpara
+fimpara
+
+Fimalgoritmo
+
+d)Algoritmo "semnome"
+Var
+a : vetor[1..10] de inteiro
+c : vetor[1..10,1..3] de inteiro
+
+x,y ,fat , cont :inteiro
+
+Inicio
+
+para x de 1 ate 10  faca
+           escreval (" digite o",x," elemento do vetor A")
+           leia (a[x])
+
+fimpara
+
+para x de 1 ate 10 faca
+     para y de 1 ate 3 faca
+          se (y=1)entao
+             c[x,1]<- a[ x]  +5
+          senao
+              se (y=2) entao
+                 fat<-1
+                 para cont de 1 ate a[x] faca
+                      fat<-fat*cont
+                 fimpara
+                 c[x,2]<- fat
+              senao
+                   c[x,3]<- a[ x]  * a[x]
+              fimse
+          fimse
+
+     fimpara
+fimpara
+para x de 1 ate 10 faca
+     para y de 1 ate 3 faca
+      escreval ("os elementos da matriz C linha ",x," coluna ",y," = ", c[x,y])
+     fimpara
+fimpara
+Fimalgoritmo
+
+e)Algoritmo "semnome"
+Var
+a : vetor[1..12] de inteiro
+b : vetor[1..12] de inteiro
+c : vetor[1..12,1..2] de inteiro
+
+x,y , cont :inteiro
+
+Inicio
+
+para x de 1 ate 12  faca
+           escreval (" digite o",x," elemento do vetor A")
+           leia (a[x])
+fimpara
+
+para x de 1 ate 12  faca
+           escreval (" digite o",x," elemento do vetor B")
+           leia (b[x])
+fimpara
+
+para x de 1 ate 12 faca
+     para y de 1 ate 2 faca
+          se (y=1)entao
+             c[x,1]<- a[x] * 2
+          senao
+               c[x,2]<- b[x] - 5
+          fimse
+
+     fimpara
+fimpara
+
+para x de 1 ate 12 faca
+     escreval ("os elementos da matriz C linha ",x," coluna ",y," = ", c[x,1])
+fimpara
+
+para x de 1 ate 12 faca
+     escreval ("os elementos da matriz C linha ",x," coluna ",y," = ", c[x,2])
+fimpara
+
+
+Fimalgoritmo
+
+f)Algoritmo "semnome"
+Var
+a : vetor[1..5,1..4] de inteiro
+b : vetor[1..5,1..4] de inteiro
+x,y ,fat , cont :inteiro
+
+Inicio
+
+para x de 1 ate 5  faca
+     para y de 1 ate 4 faca
+           escreval (" digite os elementos da matriz A linha ",x," coluna ",y)
+           leia (a[x,y])
+           fat<- 1
+           para cont de 1 ate a[x,y] faca
+                fat<- fat*cont
+           fimpara
+           b[x,y]<- fat
+     fimpara
+fimpara
+
+para x de 1 ate 5  faca
+     para y de 1 ate 4 faca
+         escreval (" os elementos da matriz B linha ",x," coluna ",y,"= ", b[x,y])
+     fimpara
+fimpara
+
+
+Fimalgoritmo
+
+g)Algoritmo "semnome"
+Var
+a : vetor[1..4,1..5] de real
+b : vetor[1..4,1..5] de real
+x , y :inteiro
+
+Inicio
+
+para x de 1 ate 4  faca
+     para y de 1 ate 5 faca
+           escreval ("digite as temperaturas em celcius da matriz A linha ",x," coluna ",y)
+           leia (a[x,y])
+           b[x,y] <- (9 * a[x,y] + 160) /5
+     fimpara
+fimpara
+
+para x de 1 ate 4  faca
+     para y de 1 ate 5 faca
+         escreval ("temperatura em celcius da matriz A linha ",x," coluna ",y,"= ", a[x,y])
+     fimpara
+fimpara
+
+para x de 1 ate 4  faca
+     para y de 1 ate 5 faca
+         escreval ("temperatura em fahrenheit da matriz B linha ",x," coluna ",y,"= ", b[x,y])
+     fimpara
+fimpara
+
+
+Fimalgoritmo
+
+h)Algoritmo "semnome"
+Var
+a : vetor[1..5,1..5] de real
+b : vetor[1..5,1..5] de real
+x , y :inteiro
+
+Inicio
+
+para x de 1 ate 5  faca
+     para y de 1 ate 5 faca
+           escreval ("digite os numeros da matriz A linha ",x," coluna ",y)
+           leia (a[x,y])
+           se ( x =  y) entao
+              b[x,y] <- a[x,y] * 3
+           senao
+              b[x,y] <- a[x,y] * 2
+           fimse
+     fimpara
+fimpara
+
+para x de 1 ate 5  faca
+     para y de 1 ate 5 faca
+         escreval ("numeros da matriz B linha ",x," coluna ",y," = ", b[x,y])
+     fimpara
+fimpara
+
+
+Fimalgoritmo
+
+i)Algoritmo "semnome"
+Var
+a : vetor[1..7,1..7] de inteiro
+b : vetor[1..7,1..7] de inteiro
+x , y , fat , cont , aux , fats:inteiro
+
+Inicio
+
+para x de 1 ate 7  faca
+     para y de 1 ate 7 faca
+           escreval ("digite os numeros da matriz A linha ",x," coluna ",y)
+           leia (a[x,y])
+           se ( a[x,y] % 2 = 0 ) entao
+              para cont de 1 ate a[x,y] faca
+                   fats<- fats+cont
+              fimpara
+              b[x,y]<- fats
+           senao
+              fat<- 1
+              para cont de 1 ate a[x,y] faca
+                   fat<- fat*cont
+              fimpara
+              b[x,y]<- fat
+           fimse
+     fimpara
+fimpara
+
+para x de 1 ate 7  faca
+     para y de 1 ate 7 faca
+         escreval ("numeros da matriz B linha ",x," coluna ",y," = ", b[x,y])
+     fimpara
+fimpara
+
+
+Fimalgoritmo
+
+j)Algoritmo "semnome"
+Var
+a : vetor[1..6,1..5] de inteiro
+b : vetor[1..6,1..5] de inteiro
+x , y :inteiro
+
+Inicio
+
+para x de 1 ate 6  faca
+     para y de 1 ate 5 faca
+           escreval ("digite os numeros da matriz A linha ",x," coluna ",y)
+           leia (a[x,y])
+           se ( a[x,y] % 2 = 0 ) entao
+              b[x,y] <- a[x,y] + 5
+           senao
+              b[x,y] <- a[x,y] - 4
+           fimse
+     fimpara
+fimpara
+
+para x de 1 ate 6  faca
+     para y de 1 ate 5 faca
+         escreval ("numeros da matriz A linha ",x," coluna ",y," = ", a[x,y])
+     fimpara
+fimpara
+
+para x de 1 ate 6  faca
+     para y de 1 ate 5 faca
+         escreval ("numeros da matriz B linha ",x," coluna ",y," = ", b[x,y])
+     fimpara
+fimpara
+
+
+Fimalgoritmo
+
+
+k)Algoritmo "semnome"
+Var
+a : vetor[1..4,1..4] de inteiro
+x , y , soma :inteiro
+
+Inicio
+
+para x de 1 ate 4  faca
+     para y de 1 ate 4 faca
+           escreval ("digite os numeros da matriz A linha ",x," coluna ",y)
+           leia (a[x,y])
+           se ( x = y ) entao
+              soma <- soma + a[x,y]
+           fimse
+     fimpara
+fimpara
+
+escreval ("soma dos numeros na diagonal da matriz A = ",soma)
+
+Fimalgoritmo
+
+L)Algoritmo "semnome"
+Var
+a : vetor[1..15,1..15] de inteiro
+x , y , soma , c :inteiro
+
+Inicio
+
+para x de 1 ate 15  faca
+     para y de 1 ate 15 faca
+           escreval ("digite os numeros da matriz A linha ",x," coluna ",y)
+           leia (a[x,y])
+           se ( (a[x,y] % 2 = 0) e (x = y)) entao
+              soma <- soma + a[x,y]
+           fimse
+     fimpara
+fimpara
+
+escreval ("soma dos numeros pares na diagonal da matriz A = ",soma)
+
+Fimalgoritmo
+
+m)Algoritmo "semnome"
+Var
+a : vetor[1..5,1..5] de inteiro
+x , y , soma , c :inteiro
+
+Inicio
+
+para x de 1 ate 5  faca
+     para y de 1 ate 5 faca
+           escreval ("digite os numeros da matriz A linha ",x," coluna ",y)
+           leia (a[x,y])
+           se ( (a[x,y] % 2 = 1) e (x = y)) entao
+              soma <- soma + a[x,y]
+           fimse
+     fimpara
+fimpara
+
+escreval ("soma dos numeros pares na diagonal da matriz A = ",soma)
+
+Fimalgoritmo
+
+n)Algoritmo "semnome"
+Var
+a : vetor[1..7,1..7] de inteiro
+x , y , quant :inteiro
+
+Inicio
+
+para x de 1 ate 7  faca
+     para y de 1 ate 7 faca
+           escreval ("digite os numeros da matriz A linha ",x," coluna ",y)
+           leia (a[x,y])
+           se (a[x,y] % 2 = 0) entao
+              quant <- quant + 1
+           fimse
+     fimpara
+fimpara
+
+escreval ("quantidade de numeros pares na matriz A = ",quant)
+
+Fimalgoritmo
+
+o)Algoritmo "semnome"
+Var
+a : vetor[1..8,1..6] de inteiro
+b : vetor[1..8] de inteiro
+x , y , soma :inteiro
+
+Inicio
+
+para x de 1 ate 8  faca
+     para y de 1 ate 6 faca
+           escreval ("digite os numeros da matriz A linha ",x," coluna ",y)
+           leia (a[x,y])
+           b[x] <- b[x] + a[x,y]
+     fimpara
+fimpara
+
+para x de 1 ate 8  faca
+          escreval ("soma dos numeros da matriz A linha ",x," = ",b[x])
+fimpara
+
+
+Fimalgoritmo
+
+p)Algoritmo "semnome"
+Var
+a : vetor[1..10,1..7] de inteiro
+x , y , quant_p , quant_i , quant :inteiro
+p_p , p_i : real
+Inicio
+
+para x de 1 ate 10  faca
+     para y de 1 ate 7 faca
+           escreval ("digite os numeros da matriz A linha ",x," coluna ",y)
+           leia (a[x,y])
+           se (a[x,y] % 2 = 0) entao
+              quant_p <- quant_p + 1
+           senao
+              quant_i <- quant_i + 1
+           fimse
+           quant <- quant + 1
+     fimpara
+fimpara
+
+escreval ("quantidade de numeros pares na matriz A = ",quant_p)
+escreval ("quantidade de numeros impares na matriz A = ",quant_i)
+
+p_p <- (quant_p * 100) / quant
+p_i <- (quant_i * 100) / quant
+
+
+escreval ("porcentagem de numeros pares na matriz A = ",p_p)
+escreval ("porcentagem de numeros impares na matriz A = ",p_i)
+
+Fimalgoritmo
+
+q)Algoritmo "semnome"
+Var
+a : vetor[1..4,1..5] de inteiro
+b : vetor[1..4] de inteiro
+c : vetor[1..5] de inteiro
+x , y , soma :inteiro
+
+Inicio
+
+para x de 1 ate 4  faca
+     para y de 1 ate 5 faca
+           escreval ("digite os numeros da matriz A linha ",x," coluna ",y)
+           leia (a[x,y])
+           b[x] <- b[x] + a[x,y]
+           c[y] <- c[y] + a[x,y]
+     fimpara
+fimpara
+
+para x de 1 ate 4  faca
+          escreval ("soma dos numeros da matriz A linha ",x," = ",b[x])
+fimpara
+
+para y de 1 ate 5  faca
+          escreval ("soma dos numeros da matriz A coluna ",y," = ",c[y])
+fimpara
+
+Fimalgoritmo
+
+r)Algoritmo "semnome"
+Var
+a : vetor[1..4] de inteiro
+b : vetor[1..4] de inteiro
+c : vetor[1..4] de inteiro
+d : vetor[1..4] de inteiro
+ee : vetor[1..4,1..4] de inteiro
+x , y , soma , fat , cont  :inteiro
+
+Inicio
+
+para y de 1 ate 4 faca
+           escreval ("digite os numeros do vetor A coluna ",y)
+           leia (a[y])
+           ee[1,y] <- a[y] * 2
+
+fimpara
+
+para y de 1 ate 4 faca
+           escreval ("digite os numeros do vetor B coluna ",y)
+           leia (b[y])
+           ee[2,y] <- b[y] * 3
+
+fimpara
+
+para y de 1 ate 4 faca
+           escreval ("digite os numeros do vetor C coluna ",y)
+           leia (c[y])
+           ee[3,y] <- b[y] * 4
+
+fimpara
+
+para y de 1 ate 4 faca
+           escreval ("digite os numeros do vetor D coluna ",y)
+           leia (d[y])
+           fat<- 1
+              para cont de 1 ate d[y] faca
+                   fat<- fat*cont
+              fimpara
+              ee[4,y]<- fat
+
+fimpara
+
+para x de 1 ate 4  faca
+     para y de 1 ate 4 faca
+         escreval ("numeros da matriz E linha ",x," coluna ",y," = ",ee[x,y])
+     fimpara
+fimpara
+
+
+Fimalgoritmo
+
+s)Algoritmo "semnome"
+Var
+a : vetor[1..5,1..6] de inteiro
+b : vetor[1..5,1..6] de inteiro
+c : vetor[1..5,1..6] de inteiro
+x , y :inteiro
+
+Inicio
+
+para x de 1 ate 5  faca
+     para y de 1 ate 6 faca
+           escreval ("digite os numeros pares da matriz A linha ",x," coluna ",y)
+           leia (a[x,y])
+           enquanto (a[x,y] % 2 = 1) faca
+              se (a[x,y] % 2 = 1)entao
+                 escreval ("denovo digite os numeros pares da matriz A linha ",x," coluna ",y)
+                 leia (a[x,y])
+              fimse
+           fimenquanto
+     fimpara
+fimpara
+
+para x de 1 ate 5  faca
+     para y de 1 ate 6 faca
+           escreval ("digite os numeros impares da matriz B linha ",x," coluna ",y)
+           leia (b[x,y])
+           enquanto (b[x,y] % 2 = 0) faca
+              se (b[x,y] % 2 = 0)entao
+                 escreval ("denovo digite os numeros impares da matriz B linha ",x," coluna ",y)
+                 leia (b[x,y])
+              fimse
+           fimenquanto
+     fimpara
+fimpara
+
+para x de 1 ate 5  faca
+     para y de 1 ate 6 faca
+        c[x,y] <- a[x,y] + b[x,y]
+     fimpara
+fimpara
+
+
+para x de 1 ate 5  faca
+     para y de 1 ate 6 faca
+         escreval ("numeros da matriz C linha ",x," coluna ",y," = ",c[x,y])
+     fimpara
+fimpara
+
+
+Fimalgoritmo
+
+t)Algoritmo "semnome"
+Var
+a : vetor[1..4,1..5] de inteiro
+b : vetor[1..4,1..5] de inteiro
+c : vetor[1..4,1..5] de inteiro
+x , y :inteiro
+
+Inicio
+
+para x de 1 ate 4  faca
+     para y de 1 ate 5 faca
+           escreval ("digite os numeros divisiveis por 3 e 4 da matriz A linha ",x," coluna ",y)
+           leia (a[x,y])
+           enquanto ((a[x,y] % 3 >= 1) e (a[x,y] % 4 >= 1)) faca
+              se ((a[x,y] % 3 >= 1) e (a[x,y] % 4 >= 1))entao
+                 escreval ("denovo digite os numeros divisiveis por 3 e 4 da matriz A linha ",x," coluna ",y)
+                 leia (a[x,y])
+              fimse
+           fimenquanto
+     fimpara
+fimpara
+
+para x de 1 ate 4  faca
+     para y de 1 ate 5 faca
+           escreval ("digite os numeros divisiveis por 5 e 6 da matriz B linha ",x," coluna ",y)
+           leia (b[x,y])
+           enquanto ((b[x,y] % 5 >= 1) e (b[x,y] % 6 >= 1)) faca
+              se ((b[x,y] % 5 >= 1) e (b[x,y] % 6 >= 1)) entao
+                 escreval ("denovo digite os numeros divisiveis por 5 e 6 da matriz B linha ",x," coluna ",y)
+                 leia (b[x,y])
+              fimse
+           fimenquanto
+     fimpara
+fimpara
+
+para x de 1 ate 4  faca
+     para y de 1 ate 5 faca
+        c[x,y] <- a[x,y] - b[x,y]
+     fimpara
+fimpara
+
+
+para x de 1 ate 4  faca
+     para y de 1 ate 5 faca
+         escreval ("numeros da matriz C linha ",x," coluna ",y," = ",c[x,y])
+     fimpara
+fimpara
+
+
+Fimalgoritmo
+
+u)Algoritmo "semnome"
+Var
+a : vetor[1..4,1..5] de inteiro
+b : vetor[1..4,1..5] de inteiro
+c : vetor[1..4,1..5] de inteiro
+x , y :inteiro
+
+Inicio
+
+para x de 1 ate 4  faca
+     para y de 1 ate 5 faca
+           escreval ("digite os numeros divisiveis por 3 e 4 da matriz A linha ",x," coluna ",y)
+           leia (a[x,y])
+           enquanto ((a[x,y] % 3 >= 1) e (a[x,y] % 4 >= 1)) faca
+              se ((a[x,y] % 3 >= 1) e (a[x,y] % 4 >= 1))entao
+                 escreval ("denovo digite os numeros divisiveis por 3 e 4 da matriz A linha ",x," coluna ",y)
+                 leia (a[x,y])
+              fimse
+           fimenquanto
+     fimpara
+fimpara
+
+para x de 1 ate 4  faca
+     para y de 1 ate 5 faca
+           escreval ("digite os numeros divisiveis por 5 e 6 da matriz B linha ",x," coluna ",y)
+           leia (b[x,y])
+           enquanto ((b[x,y] % 5 >= 1) e (b[x,y] % 6 >= 1)) faca
+              se ((b[x,y] % 5 >= 1) e (b[x,y] % 6 >= 1)) entao
+                 escreval ("denovo digite os numeros divisiveis por 5 e 6 da matriz B linha ",x," coluna ",y)
+                 leia (b[x,y])
+              fimse
+           fimenquanto
+     fimpara
+fimpara
+
+para x de 1 ate 4  faca
+     para y de 1 ate 5 faca
+        c[x,y] <- a[x,y] * b[x,y]
+     fimpara
+fimpara
+
+
+para x de 1 ate 4  faca
+     para y de 1 ate 5 faca
+         escreval ("numeros da matriz C linha ",x," coluna ",y," = ",c[x,y])
+     fimpara
+fimpara
+
+
+Fimalgoritmo
+
+v)Algoritmo "semnome"
+Var
+a : vetor[1..5,1..5] de inteiro
+b : vetor[1..5,1..5] de inteiro
+c : vetor[1..5,1..5] de inteiro
+x , y :inteiro
+
+Inicio
+
+para x de 1 ate 5  faca
+     para y de 1 ate 5 faca
+           escreval ("digite os numeros nao divisiveis por 3 da matriz A linha ",x," coluna ",y)
+           leia (a[x,y])
+           enquanto (a[x,y] % 3 = 0) faca
+              se (a[x,y] % 3 = 0) entao
+                 escreval ("denovo digite os numeros nao divisiveis por 3 da matriz A linha ",x," coluna ",y)
+                 leia (a[x,y])
+              fimse
+           fimenquanto
+     fimpara
+fimpara
+
+para x de 1 ate 5  faca
+     para y de 1 ate 5 faca
+           escreval ("digite os numeros nao divisiveis por 6 da matriz B linha ",x," coluna ",y)
+           leia (b[x,y])
+           enquanto (b[x,y] % 6 = 0) faca
+              se (b[x,y] % 6 = 0) entao
+                 escreval ("denovo digite os numeros nao divisiveis por 6 da matriz B linha ",x," coluna ",y)
+                 leia (b[x,y])
+              fimse
+           fimenquanto
+     fimpara
+fimpara
+
+para x de 1 ate 5  faca
+     para y de 1 ate 5 faca
+        c[x,y] <- a[x,y] + b[x,y]
+     fimpara
+fimpara
+
+
+para x de 1 ate 5  faca
+     para y de 1 ate 5 faca
+         escreval ("numeros da matriz C linha ",x," coluna ",y," = ",c[x,y])
+     fimpara
+fimpara
+
+
+Fimalgoritmo
+
+		

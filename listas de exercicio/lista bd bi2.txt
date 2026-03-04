@@ -1,0 +1,253 @@
+1-anomalias sao açoes quem um usuario pode fazer sem ser a intençao do banco de dados,inserçao:um medico pode fazer  um exame sem um paciente , atulizaçao:uma imobiliaria mudar o propietario da casa sem ducumentaçao nessesaria ,
+exclusao:eliminaçao de competidores sem resultados da classificaçao
+
+2-a)se eu quiser deletar a Ana mas eu deleto ela pela sua associaçao em finanças eu acabo deletando a carla isso serve para inserao e atualizaçao tambem
+b)usar o id ou o nome do funsonario para fazer alteraçoes
+
+3-(mando pula)
+
+4-seria a relaçao de uma tabela com a outra, muitos pra muitos:muitos dados passao para muitos dados da outra tabela , muitos pra poucos: muitos dados passao para poucos dados da outra tabela , 
+poucos pra poucos:poucos dados passao para poucos dados da outra tabela
+
+5-muitos pra poucos,
+
+classes-|---|k -curso
+
+6-a)muitos pra muitos
+b)alunos-k|---|k -curso
+
+7-
+create database livrariasefoseeu;    
+use livrariasefoseeu;
+
+
+CREATE TABLE autor (
+id_a int primary key,
+nome varchar (255)
+
+);
+
+CREATE TABLE EMPRESTIMO (
+id_em int primary key,
+nome varchar (255),
+livro int
+                            
+);
+
+CREATE TABLE livro (
+id_li int primary key,
+nome varchar (255),
+autor int,
+EMPRESTIMO int
+
+
+);
+
+CREATE TABLE LixAu (
+id_LixAu int primary key,
+id_li2 int,
+id_a2 int,
+id_em2 int,
+foreign key (id_li2) references livro(id_li),
+foreign key (id_a2) references autor(id_a),
+foreign key (id_em2) references EMPRESTIMO(id_em)
+
+);
+
+8-create database toavoado;    
+use toavoado;
+
+
+CREATE TABLE companiaerea (
+id_c int primary key,
+nome varchar (255)
+
+);
+
+CREATE TABLE voo (
+id_v int primary key
+
+                            
+);
+
+CREATE TABLE cliente (
+id_cl int primary key,
+nome varchar (255)
+
+
+);
+
+CREATE TABLE LixAu (
+id_LixAu int primary key,
+id_c2 int,
+id_v2 int,
+id_cl2 int,
+foreign key (id_c2) references companiaerea(id_c),
+foreign key (id_v2) references voo(id_v),
+foreign key (id_cl2) references cliente(id_cl)
+
+);
+
+todos sao muitos pra muitos
+
+9-create database issonaofoiprojetado;    
+use issonaofoiprojetado;
+
+
+CREATE TABLE empregados (
+id_e int primary key,
+nome varchar (255)
+
+);
+
+CREATE TABLE projeto (
+id_p int primary key,
+nome varchar (255)
+
+
+);
+
+CREATE TABLE empo (
+id_empo int primary key,
+id_e2 int,
+id_p2 int,
+foreign key (id_e2) references empregados(id_e),
+foreign key (id_p2) references projeto(id_p)
+
+);
+
+muitos para muitos
+
+10-eu decidi baseado na logica de quantos de um podia ser relacionados a outro e pelo o que o professor escreveu , um
+dos desafios foi saber que eu devia usar um tabela intermediaria em elas para fazer a relaçao muitos pra muitos
+
+PARTE 2 (bagulo de dados)
+create database podiatercriadotudocertojaprof;    
+use podiatercriadotudocertojaprof;
+
+CREATE TABLE autor (
+autor_id int primary key,
+nome varchar (255),
+nacionalidade varchar (255)
+
+);
+
+CREATE TABLE Livros (
+livro_id int primary key,
+autor_id2 int,
+titulo varchar (255),
+ano_publicacao date,
+foreign key (autor_id2) references Autor(autor_id)
+
+);
+
+CREATE TABLE Categorias (
+categoria_id int primary key,
+nome varchar (255)
+
+);
+
+CREATE TABLE Livros_Categorias (
+livroca_id int primary key,
+categoria_id2 int,
+livro_id2 int,
+foreign key (livro_id2) references Livros(livro_id),
+foreign key (categoria_id2) references Categorias(categoria_id)
+
+);
+
+CREATE TABLE Usuários (
+usuario_id int primary key,
+nome varchar (255),
+email varchar (255)
+
+);
+
+CREATE TABLE Emprestimos (
+emprestimo_id int primary key,
+livro_id2 int,
+usuario_id2 int,
+foreign key (livro_id2) references livros(livro_id),
+foreign key (usuario_id2) references Usuários(usuario_id),
+data_emprestimo date,
+data_devolucao date
+
+);
+
+#INSERTS
+#Tabela Autores
+INSERT INTO Autor (autor_id, nome, nacionalidade) VALUES
+(1, 'Gabriel Garcia Marquez', 'Colombiana'),
+(2, 'J.K. Rowling', 'Britânica'),
+(3, 'Haruki Murakami', 'Japonesa');
+
+#Tabela Livros
+INSERT INTO Livros (livro_id, titulo, ano_publicacao, autor_id2) VALUES
+(1, 'Cem Anos de Solidão', 1967, 1),
+(2, 'Harry Potter e a Pedra Filosofal', 1997, 2),
+(3, 'Kafka à Beira-Mar', 2002, 3);
+
+#Tabela Categorias
+INSERT INTO Categorias (categoria_id, nome) VALUES
+(1, 'Ficção'),
+(2, 'Fantasia'),
+(3, 'Literatura Latino-Americana');
+
+#Tabela Livros_Categorias
+INSERT INTO Livros_Categorias (livroca_id,livro_id2, categoria_id2) VALUES
+(1,1, 3),
+(2,2, 2),
+(3,3, 1);
+
+#Tabela Usuários
+INSERT INTO Usuários (usuario_id, nome, email) VALUES
+(1, 'Ana Silva', 'ana.silva@example.com'),
+(2, 'Bruno Dias', 'bruno.dias@example.com'),
+(3, 'Carlos Souza', 'carlos.souza@example.com');
+
+#Tabela Empréstimos
+INSERT INTO Emprestimos (emprestimo_id, livro_id2, usuario_id2,data_emprestimo, data_devolucao) VALUES
+(1, 1, 1, '2023-01-10', '2023-01-24'),
+(2, 2, 2, '2023-02-15', NULL),
+(3, 3, 1, '2023-03-12', '2023-03-26');
+
+#1
+select * from Livros;
+#2
+select * from Emprestimos where curdate() = data_devolucao;
+#3
+select * from Livros_Categorias where categoria_id2 = 2;
+#4
+select * from Livros where autor_id2 = 3;
+#5
+select * from Emprestimos;
+#6
+select * from Livros order by ano_publicacao ;
+#7
+select * from Livros_Categorias where categoria_id2 = 2;
+#8
+select * from Emprestimos , Livros_Categorias where Emprestimos.livro_id2 = Livros_Categorias.livro_id2;
+#9
+select * from Emprestimos where data_emprestimo < curdate();
+#10
+select autor_id2 from Livros where count(livro_id2 like livro_id2) ;
+#11
+select * from Emprestimos , Livros where livro_id2 not like count(livre_id);
+#12
+select * from Emprestimos where count(usuario_id2 = usuario_id2) like 5;
+#13
+select * from Livros where autor_id2 = 1;
+#14
+select autor_id2 from Livros where count(livro_id2.coluna1 like livro_id2.coluna1) < count(livro_id2.coluna2 like livro_id2.coluna2) < count(livro_id2.coluna3 like livro_id2.coluna3) ;
+#15
+select * from Emprestimos order by livro_id2 ;
+#16
+select * from Categorias;
+#17
+select Livros.* , Livros_Categorias.categoria_id2  from Livros ,Livros_Categorias where Livros.livro_id = Livros_Categorias.livro_id2 order by ano_publicacao;
+#18
+select Livros.* , Livros_Categorias.categoria_id2  from Livros ,Livros_Categorias where Livros.livro_id = Livros_Categorias.livro_id2;
+#19
+select * from Emprestimos where data_emprestimo = curdate() and data_devolucao = curdate();
+#20
+select * from Emprestimos where data_devolucao is not null order by data_emprestimo

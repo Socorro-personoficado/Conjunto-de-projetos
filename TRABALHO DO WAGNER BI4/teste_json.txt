@@ -1,0 +1,11 @@
+
+
+
+{
+'Id': 2,
+'Nome': 'luizz',
+'Peso (Kg)': 70,
+'Altura (m)': 2,
+'IMC': 17,5,
+'Classificação': 'Magreza'
+},
